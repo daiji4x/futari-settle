@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>ふたり精算（にゃんにゃん費） v0.8</title>
+<title>ふたり精算（にゃんにゃん費） v0.9</title>
 <style>
 :root{--bg:#f3f7f4;--card:#fff;--text:#183126;--muted:#687a70;--line:#dce7df;--accent:#2f6b4f;--good:#26734f;--warn:#9a6a16;--danger:#b42318;--shadow:0 8px 24px rgba(25,65,45,.08)}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:0 auto;padding:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{font-weight:800;font-size:1.2rem}.chip{font-size:.8rem;background:#eef2f7;border-radius:999px;padding:6px 10px;color:#46505a}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}.hero{padding:20px}.hero .label{color:var(--muted);font-size:.9rem}.balance{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.03em;margin:8px 0}.direction{font-size:1rem;color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700}.btn.primary{background:var(--accent);color:#fff}.btn.secondary{background:#eef2f7;color:#28323c}.btn.danger{background:#fff0ee;color:var(--danger)}.section-title{font-size:1rem;font-weight:800;margin-bottom:12px}.month-list,.history-list{display:flex;flex-direction:column;gap:8px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}.row .meta{color:var(--muted);font-size:.85rem}.row .amount{font-weight:800}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.82rem;color:var(--muted);font-weight:700}input,select{width:100%;border:1px solid #d5d9df;border-radius:10px;padding:11px 12px;background:#fff;color:var(--text)}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.seg button{border:1px solid #d5d9df;background:#fff;padding:12px;border-radius:10px;font-weight:800}.seg button.active{border-color:var(--accent);background:#e6f1ea;color:#245b43}.details{margin-top:10px}.details summary{cursor:pointer;color:var(--muted);font-weight:700}.ratio-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.ratio-preset{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.ratio-preset button{border:1px solid #d5d9df;background:#fff;border-radius:9px;padding:9px 11px;transition:.15s}.ratio-preset button.recommended{border-color:var(--accent);background:#e6f1ea;color:#245b43;font-weight:850;box-shadow:0 0 0 2px rgba(45,108,223,.08)}.ratio-preset button.unlikely{opacity:.42;font-size:.78rem}.ratio-main{font-weight:800}.advanced-ratio{margin-top:10px}.quick-picks{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.quick-picks button{border:1px solid #d5d9df;background:#f8fafc;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:750;color:#3d4852}.quick-picks:before{content:"よく使う";font-size:.72rem;color:var(--muted);align-self:center;margin-right:2px}.tabs{display:flex;gap:8px;margin:18px 0 12px;overflow:auto;padding-bottom:2px}.tab{white-space:nowrap;border:0;background:transparent;padding:10px 12px;border-radius:10px;font-weight:800;color:var(--muted)}.tab.active{background:#e3eee7;color:#245b43}.panel{display:none}.panel.active{display:block}.small{font-size:.85rem;color:var(--muted)}.settlement-box{border:1px dashed #c9ced6;border-radius:12px;padding:12px;background:#fafbfc}.settlement-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}.settlement-options label{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:600}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#20262d;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:99}.toast.show{opacity:1}.empty{padding:18px;text-align:center;color:var(--muted)}.badge{font-size:.72rem;padding:4px 7px;border-radius:999px;background:#f0f2f4;color:#59616a}.history-actions{display:flex;gap:6px}.icon-btn{border:1px solid #d5d9df;background:#fff;border-radius:8px;padding:6px 8px}.footer-note{font-size:.75rem;color:#8a929a;margin-top:12px}.lang{font-size:.75rem;color:#77818b;margin-top:3px}@media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.card{border-radius:16px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{align-items:flex-start}.balance{font-size:2.3rem}.btn{flex:1}.actions{display:grid;grid-template-columns:1fr 1fr}.ratio-wrap{grid-template-columns:1fr 1fr}.row{align-items:flex-start}}@media(min-width:900px){#inputPanel .card{position:sticky;top:16px}#inputPanel .card{padding:14px}.form-grid{gap:10px}.field{gap:4px}.details{margin-top:8px}.ratio-wrap{margin-top:8px;gap:10px}.quick-picks{margin-top:5px}.section-title{margin-bottom:10px}input,select{padding:9px 11px}.seg button{padding:10px}.btn{padding:10px 14px}}
 .modal-backdrop{position:fixed;inset:0;background:rgba(10,30,20,.42);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}.modal-backdrop.show{display:flex}.modal-card{width:min(440px,100%);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.22)}.modal-card h3{margin:0 0 10px}.modal-card .modal-message{white-space:pre-line;line-height:1.6;color:var(--text)}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.modal-actions button{min-width:110px}
@@ -14,7 +14,7 @@
 .submit-main{width:100%;font-size:1rem;padding:13px 18px}
 .clear-link{align-self:flex-end;border:0;background:transparent;color:var(--muted);font-size:.78rem;padding:4px 2px;text-decoration:underline;text-underline-offset:2px}
 .clear-link:hover{color:var(--text)}
-/* v0.8: Supabase Auth + Database */
+/* v0.9: Supabase Auth + Database + Rent */
 #inputPanel .form-grid{grid-template-columns:1fr}
 #inputPanel .field.full{grid-column:1/-1}
 @media(min-width:480px){#inputPanel .compact-pair{grid-column:auto}}
@@ -34,6 +34,36 @@
 #recoveryPanel{display:none}
 .db-error{background:#fff0ee;color:var(--danger);border:1px solid #f2c7c2}
 button:disabled{opacity:.55;cursor:wait}
+
+/* v0.9: 精算ラジオの100%幅暴走を防止 */
+.settlement-options input[type="radio"]{width:auto;flex:0 0 auto;margin:0}
+.settlement-options label{flex-wrap:wrap;min-width:0}
+
+/* v0.9: 家賃 */
+.rent-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.rent-summary{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.rent-year-nav{display:flex;align-items:center;gap:8px}
+.rent-year-nav button{border:1px solid #d5d9df;background:#fff;border-radius:9px;padding:7px 10px;font-weight:800}
+.rent-year{font-weight:900;min-width:5.5em;text-align:center}
+.rent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rent-card{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;min-width:0}
+.rent-card.paid{background:#f5faf7;border-color:#bfd7c8}
+.rent-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.rent-month{font-size:1.08rem;font-weight:900}
+.rent-status{font-size:.72rem;padding:4px 7px;border-radius:999px;background:#f0f2f4;color:#59616a;white-space:nowrap}
+.rent-card.paid .rent-status{background:#dfeee5;color:#245b43}
+.rent-check{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:800;margin-bottom:10px;cursor:pointer}
+.rent-check input[type="checkbox"]{width:20px;height:20px;flex:0 0 auto;margin:0;accent-color:var(--accent)}
+.rent-amount-row{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.rent-amount-row input{font-weight:800;text-align:right}
+.rent-amount-actions{display:flex;gap:6px;flex-wrap:wrap}
+.rent-mini-btn{border:1px solid #d5d9df;background:#fff;border-radius:8px;padding:7px 9px;font-size:.75rem;font-weight:750;color:#3d4852}
+.rent-date{margin-top:9px;font-size:.8rem;color:var(--muted)}
+.rent-date strong{color:var(--text)}
+.rent-guide{margin-top:12px;padding:10px 12px;border-radius:10px;background:#f7faf8;font-size:.78rem;color:var(--muted);line-height:1.55}
+@media(max-width:760px){.rent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.rent-grid{grid-template-columns:1fr}.rent-head{display:block}.rent-year-nav{margin-top:12px;justify-content:center}.rent-card{padding:13px}.rent-amount-actions{display:grid;grid-template-columns:1fr 1fr}.rent-mini-btn{width:100%}}
+
 </style>
 </head>
 <body>
@@ -43,7 +73,7 @@ button:disabled{opacity:.55;cursor:wait}
     <div class="small" style="margin-top:4px">だいじ × かんそく</div>
     <div id="loginPanel">
       <h2>ログイン</h2>
-      <div class="small auth-note">Supabase Auth + DB v0.8</div>
+      <div class="small auth-note">Supabase Auth + DB v0.9</div>
       <div class="field"><label>メールアドレス</label><input id="loginEmail" type="email" autocomplete="username" placeholder="email@example.com"></div>
       <div class="field" style="margin-top:10px"><label>パスワード</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="パスワード"></div>
       <button id="loginButton" class="btn primary" style="width:100%;margin-top:14px">ログインする</button>
@@ -60,13 +90,14 @@ button:disabled{opacity:.55;cursor:wait}
   </div>
 </div>
 <div id="mainApp" class="app" style="display:none">
-  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div class="small">だいじ × かんそく</div></div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div id="authUserChip" class="chip">Supabase接続中</div><button id="logoutButton" class="btn secondary" style="padding:6px 10px">ログアウト</button><div id="dbStatusChip" class="chip">v0.8 / DB読込中…</div></div></div>
+  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div class="small">だいじ × かんそく</div></div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div id="authUserChip" class="chip">Supabase接続中</div><button id="logoutButton" class="btn secondary" style="padding:6px 10px">ログアウト</button><div id="dbStatusChip" class="chip">v0.9 / DB読込中…</div></div></div>
 
   <div class="tabs">
     <button class="tab active" data-tab="home">ホーム</button>
     <button class="tab" data-tab="input">＋ 支出</button>
     <button class="tab" data-tab="history">履歴</button>
     <button class="tab" data-tab="settle">精算</button>
+    <button class="tab" data-tab="rent">家賃</button>
   </div>
 
   <div id="home" class="panel active">
@@ -130,6 +161,20 @@ button:disabled{opacity:.55;cursor:wait}
       <div id="settlementHistory" class="history-list"></div>
     </div>
   </div>
+  <div id="rent" class="panel">
+    <div class="card">
+      <div class="rent-head">
+        <div>
+          <div class="section-title" style="margin-bottom:4px">家賃</div>
+          <div class="small">かんそくが家賃を支払い、だいじが月々の負担分をかんそくへ振り込みます。</div>
+          <div class="rent-summary"><span id="rentStandardChip" class="chip">標準月額 ¥40,000</span><span id="rentPaidSummary" class="chip">—</span></div>
+        </div>
+        <div class="rent-year-nav"><button type="button" onclick="changeRentYear(-1)" aria-label="前年">‹</button><div id="rentYearLabel" class="rent-year">2026年</div><button type="button" onclick="changeRentYear(1)" aria-label="翌年">›</button></div>
+      </div>
+      <div id="rentGrid" class="rent-grid"></div>
+      <div class="rent-guide">金額は月ごとに変更できます。「この月だけ」はその月だけ、「この月以降」はその月から年末まで同じ金額に変更し、以後の標準月額にも使います。支払済みチェックは、ON/OFFどちらも確認してから保存します。</div>
+    </div>
+  </div>
 </div>
 <div id="toast" class="toast"></div><div id="modal" class="modal-backdrop" role="dialog" aria-modal="true"><div class="modal-card"><h3 id="modalTitle">確認</h3><div id="modalMessage" class="modal-message"></div><div class="modal-actions"><button id="modalCancel" class="btn secondary">キャンセル</button><button id="modalOk" class="btn danger">実行する</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -139,7 +184,8 @@ const SUPABASE_PUBLISHABLE_KEY='sb_publishable_aiB7Hp3ojZpsgbpa19W57A_XGodIZ4r';
 const supabaseClient=supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
 
 let recoveryMode=false;
-let state={expenses:[],settlements:[]};
+let state={expenses:[],settlements:[],rentSettings:null,rentPayments:[]};
+let rentYear=new Date().getFullYear();
 let payer='だいじ';
 let householdId=null;
 let currentUser=null;
@@ -150,7 +196,7 @@ let editingExpenseId=null;
 
 const yen=n=>new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:0}).format(Math.round(n));
 const monthOf=d=>String(d||'').slice(0,7);
-const today=()=>new Date().toISOString().slice(0,10);
+const today=()=>{const d=new Date(),y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`};
 const fmtDate=d=>new Date(d+'T00:00:00').toLocaleDateString('ja-JP');
 const fromDbTime=v=>v?new Date(v).getTime():0;
 
@@ -188,7 +234,7 @@ function setAuthView(session){
     document.getElementById('authUserChip').textContent=`Supabase ✓ ${email}`;
     initializeCloud(session.user);
   } else {
-    state={expenses:[],settlements:[]}; householdId=null; currentUser=null; loadedUserId=null;
+    state={expenses:[],settlements:[],rentSettings:null,rentPayments:[]}; householdId=null; currentUser=null; loadedUserId=null;
   }
 }
 async function initAuth(){
@@ -226,35 +272,121 @@ supabaseClient.auth.onAuthStateChange((event,session)=>{if(event==='PASSWORD_REC
 
 async function initializeCloud(user){
   if(loadingCloud||loadedUserId===user.id)return;
-  loadingCloud=true;currentUser=user;setDbStatus('v0.8 / DB接続中…');
+  loadingCloud=true;currentUser=user;setDbStatus('v0.9 / DB接続中…');
   try{
     const {data:member,error:memberError}=await supabaseClient.from('household_members').select('household_id, display_name').eq('user_id',user.id).limit(1).maybeSingle();
     if(memberError)throw memberError;
     if(!member)throw new Error('このユーザーは household_members に登録されていません。');
     householdId=member.household_id;currentDisplayName=member.display_name||'';
     if(currentDisplayName==='だいじ'||currentDisplayName==='かんそく')setPayer(currentDisplayName);
+    rentYear=new Date().getFullYear();
+    await ensureRentYear(rentYear);
     await loadCloudData();
     loadedUserId=user.id;
-    setDbStatus(`v0.8 / DB ✓ ${currentDisplayName||'接続済み'}`);
+    setDbStatus(`v0.9 / DB ✓ ${currentDisplayName||'接続済み'}`);
   }catch(err){
-    console.error(err);setDbStatus('v0.8 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
+    console.error(err);setDbStatus('v0.9 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
   }finally{loadingCloud=false}
 }
 async function loadCloudData(){
   if(!householdId)return;
-  const [expenseRes,settlementRes,monthRes]=await Promise.all([
+  const yearStart=`${rentYear}-01-01`,yearEnd=`${rentYear}-12-31`;
+  const [expenseRes,settlementRes,monthRes,rentSettingsRes,rentPaymentsRes]=await Promise.all([
     supabaseClient.from('expenses').select('*').eq('household_id',householdId).order('expense_date',{ascending:false}).order('created_at',{ascending:false}),
     supabaseClient.from('settlements').select('*').eq('household_id',householdId).order('settled_at',{ascending:false}),
-    supabaseClient.from('settlement_months').select('settlement_id, month')
+    supabaseClient.from('settlement_months').select('settlement_id, month'),
+    supabaseClient.from('rent_settings').select('*').eq('household_id',householdId).maybeSingle(),
+    supabaseClient.from('rent_payments').select('*').eq('household_id',householdId).gte('rent_month',yearStart).lte('rent_month',yearEnd).order('rent_month',{ascending:true})
   ]);
-  if(expenseRes.error)throw expenseRes.error;if(settlementRes.error)throw settlementRes.error;if(monthRes.error)throw monthRes.error;
+  if(expenseRes.error)throw expenseRes.error;if(settlementRes.error)throw settlementRes.error;if(monthRes.error)throw monthRes.error;if(rentSettingsRes.error)throw rentSettingsRes.error;if(rentPaymentsRes.error)throw rentPaymentsRes.error;
   state.expenses=(expenseRes.data||[]).map(r=>({id:r.id,date:r.expense_date,payer:r.payer,amount:Number(r.amount),ratioD:Number(r.ratio_daiji),ratioK:Number(r.ratio_kansoku),category:r.category||'',shop:r.shop||'',memo:r.memo||'',createdAt:fromDbTime(r.created_at)}));
   const monthsBySettlement={};
   (monthRes.data||[]).forEach(r=>{(monthsBySettlement[r.settlement_id]??=[]).push(monthOf(r.month))});
   state.settlements=(settlementRes.data||[]).map(r=>({id:r.id,through:monthOf(r.through_month),months:(monthsBySettlement[r.id]||[]).sort(),amount:Number(r.amount),settledAt:r.settled_at,createdAt:fromDbTime(r.created_at)}));
-  render();updateDuplicateWarning();
+  state.rentSettings=rentSettingsRes.data||{monthly_amount:40000,payer_name:'だいじ',receiver_name:'かんそく'};
+  state.rentPayments=(rentPaymentsRes.data||[]).map(r=>({id:r.id,month:monthOf(r.rent_month),amount:Number(r.amount),paid:!!r.paid,paidAt:r.paid_at||''}));
+  render();renderRent();updateDuplicateWarning();
 }
-async function refreshCloud(){try{setDbStatus('v0.8 / 更新中…');await loadCloudData();setDbStatus(`v0.8 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v0.8 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
+
+async function getOrCreateRentSettings(){
+  const {data,error}=await supabaseClient.from('rent_settings').select('*').eq('household_id',householdId).maybeSingle();
+  if(error)throw error;
+  if(data)return data;
+  const {data:created,error:createError}=await supabaseClient.from('rent_settings').insert({household_id:householdId,monthly_amount:40000,payer_name:'だいじ',receiver_name:'かんそく'}).select('*').single();
+  if(createError)throw createError;
+  return created;
+}
+async function ensureRentYear(year){
+  if(!householdId)return;
+  const settings=await getOrCreateRentSettings();
+  const start=`${year}-01-01`,end=`${year}-12-31`;
+  const {data,error}=await supabaseClient.from('rent_payments').select('rent_month').eq('household_id',householdId).gte('rent_month',start).lte('rent_month',end);
+  if(error)throw error;
+  const have=new Set((data||[]).map(r=>monthOf(r.rent_month)));
+  const missing=[];
+  for(let m=1;m<=12;m++){
+    const ym=`${year}-${String(m).padStart(2,'0')}`;
+    if(!have.has(ym))missing.push({household_id:householdId,rent_month:`${ym}-01`,amount:Number(settings.monthly_amount||40000),paid:false});
+  }
+  if(missing.length){const {error:insertError}=await supabaseClient.from('rent_payments').insert(missing);if(insertError)throw insertError}
+}
+async function changeRentYear(delta){
+  const next=rentYear+delta;
+  if(next<2026){toast('家賃管理は2026年以降です');return}
+  rentYear=next;
+  try{setDbStatus(`v0.9 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
+}
+function renderRent(){
+  const grid=document.getElementById('rentGrid');if(!grid)return;
+  const std=Number(state.rentSettings?.monthly_amount||40000);
+  document.getElementById('rentYearLabel').textContent=`${rentYear}年`;
+  document.getElementById('rentStandardChip').textContent=`標準月額 ${yen(std)}`;
+  const byMonth=new Map(state.rentPayments.map(r=>[r.month,r]));
+  let paidCount=0,paidTotal=0;
+  const cards=[];
+  for(let m=1;m<=12;m++){
+    const ym=`${rentYear}-${String(m).padStart(2,'0')}`,r=byMonth.get(ym)||{month:ym,amount:std,paid:false,paidAt:''};
+    if(r.paid){paidCount++;paidTotal+=r.amount}
+    cards.push(`<div class="rent-card ${r.paid?'paid':''}">
+      <div class="rent-card-top"><div class="rent-month">${m}月</div><div class="rent-status">${r.paid?'支払済み':'未払い'}</div></div>
+      <label class="rent-check"><input type="checkbox" ${r.paid?'checked':''} onclick="event.preventDefault();toggleRentPaid('${ym}')"> 支払済み</label>
+      <div class="rent-amount-row"><label>だいじ → かんそく</label><input id="rentAmount-${ym}" type="number" inputmode="numeric" min="0" step="100" value="${Math.round(r.amount)}" aria-label="${m}月の家賃負担額"></div>
+      <div class="rent-amount-actions"><button type="button" class="rent-mini-btn" onclick="saveRentAmount('${ym}',false)">この月だけ変更</button><button type="button" class="rent-mini-btn" onclick="saveRentAmount('${ym}',true)">この月以降も変更</button></div>
+      <div class="rent-date">振込日：<strong>${r.paidAt?fmtDate(r.paidAt):'—'}</strong></div>
+    </div>`)
+  }
+  grid.innerHTML=cards.join('');
+  document.getElementById('rentPaidSummary').textContent=`${rentYear}年 ${paidCount}/12か月支払済み・${yen(paidTotal)}`;
+}
+async function toggleRentPaid(ym){
+  const r=state.rentPayments.find(x=>x.month===ym);if(!r)return toast('家賃データを読み直してください');
+  const next=!r.paid,m=Number(ym.slice(5,7));
+  const ok=await askConfirm(next?'支払済みにしますか？':'支払済みを取り消しますか？',next?`${rentYear}年${m}月 / ${yen(r.amount)}\n\n確認すると今日の日付を振込日として保存します。`:`${rentYear}年${m}月 / ${yen(r.amount)}\n振込日：${r.paidAt?fmtDate(r.paidAt):'—'}\n\n未払いに戻すと振込日は空欄になります。`,next?'支払済みにする':'支払済みを取り消す');
+  if(!ok){renderRent();return}
+  const {error}=await supabaseClient.from('rent_payments').update({paid:next,paid_at:next?today():null}).eq('household_id',householdId).eq('rent_month',`${ym}-01`);
+  if(error)return toast(`家賃を更新できませんでした：${error.message}`);
+  await refreshCloud();toast(next?'支払済みにしました':'未払いに戻しました');showTab('rent');
+}
+async function saveRentAmount(ym,fromHere){
+  const el=document.getElementById(`rentAmount-${ym}`),value=Math.round(Number(el?.value));
+  if(!Number.isFinite(value)||value<0)return toast('金額を0円以上で入力してください');
+  const m=Number(ym.slice(5,7));
+  if(fromHere){
+    const ok=await askConfirm('この月以降の金額を変更しますか？',`${rentYear}年${m}月〜12月を ${yen(value)} に変更します。\nさらに今後の標準月額も ${yen(value)} にします。`,'この月以降を変更');
+    if(!ok){renderRent();return}
+    const start=`${ym}-01`,end=`${rentYear}-12-31`;
+    const {error:e1}=await supabaseClient.from('rent_payments').update({amount:value}).eq('household_id',householdId).gte('rent_month',start).lte('rent_month',end);
+    if(e1)return toast(`金額を変更できませんでした：${e1.message}`);
+    const {error:e2}=await supabaseClient.from('rent_settings').update({monthly_amount:value,updated_at:new Date().toISOString()}).eq('household_id',householdId);
+    if(e2)return toast(`標準月額を変更できませんでした：${e2.message}`);
+    await refreshCloud();toast(`${m}月以降と標準月額を変更しました`);showTab('rent');return;
+  }
+  const {error}=await supabaseClient.from('rent_payments').update({amount:value}).eq('household_id',householdId).eq('rent_month',`${ym}-01`);
+  if(error)return toast(`金額を変更できませんでした：${error.message}`);
+  await refreshCloud();toast(`${m}月だけ ${yen(value)} に変更しました`);showTab('rent');
+}
+
+async function refreshCloud(){try{setDbStatus('v0.9 / 更新中…');await loadCloudData();setDbStatus(`v0.9 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v0.9 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
 
 function showTab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
