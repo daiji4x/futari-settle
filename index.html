@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>ふたり精算（にゃんにゃん費） v0.7.1</title>
+<title>ふたり精算（にゃんにゃん費） v0.8</title>
 <style>
 :root{--bg:#f3f7f4;--card:#fff;--text:#183126;--muted:#687a70;--line:#dce7df;--accent:#2f6b4f;--good:#26734f;--warn:#9a6a16;--danger:#b42318;--shadow:0 8px 24px rgba(25,65,45,.08)}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:0 auto;padding:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{font-weight:800;font-size:1.2rem}.chip{font-size:.8rem;background:#eef2f7;border-radius:999px;padding:6px 10px;color:#46505a}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}.hero{padding:20px}.hero .label{color:var(--muted);font-size:.9rem}.balance{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.03em;margin:8px 0}.direction{font-size:1rem;color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700}.btn.primary{background:var(--accent);color:#fff}.btn.secondary{background:#eef2f7;color:#28323c}.btn.danger{background:#fff0ee;color:var(--danger)}.section-title{font-size:1rem;font-weight:800;margin-bottom:12px}.month-list,.history-list{display:flex;flex-direction:column;gap:8px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}.row .meta{color:var(--muted);font-size:.85rem}.row .amount{font-weight:800}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.82rem;color:var(--muted);font-weight:700}input,select{width:100%;border:1px solid #d5d9df;border-radius:10px;padding:11px 12px;background:#fff;color:var(--text)}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.seg button{border:1px solid #d5d9df;background:#fff;padding:12px;border-radius:10px;font-weight:800}.seg button.active{border-color:var(--accent);background:#e6f1ea;color:#245b43}.details{margin-top:10px}.details summary{cursor:pointer;color:var(--muted);font-weight:700}.ratio-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.ratio-preset{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.ratio-preset button{border:1px solid #d5d9df;background:#fff;border-radius:9px;padding:9px 11px;transition:.15s}.ratio-preset button.recommended{border-color:var(--accent);background:#e6f1ea;color:#245b43;font-weight:850;box-shadow:0 0 0 2px rgba(45,108,223,.08)}.ratio-preset button.unlikely{opacity:.42;font-size:.78rem}.ratio-main{font-weight:800}.advanced-ratio{margin-top:10px}.quick-picks{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.quick-picks button{border:1px solid #d5d9df;background:#f8fafc;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:750;color:#3d4852}.quick-picks:before{content:"よく使う";font-size:.72rem;color:var(--muted);align-self:center;margin-right:2px}.tabs{display:flex;gap:8px;margin:18px 0 12px;overflow:auto;padding-bottom:2px}.tab{white-space:nowrap;border:0;background:transparent;padding:10px 12px;border-radius:10px;font-weight:800;color:var(--muted)}.tab.active{background:#e3eee7;color:#245b43}.panel{display:none}.panel.active{display:block}.small{font-size:.85rem;color:var(--muted)}.settlement-box{border:1px dashed #c9ced6;border-radius:12px;padding:12px;background:#fafbfc}.settlement-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}.settlement-options label{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:600}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#20262d;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:99}.toast.show{opacity:1}.empty{padding:18px;text-align:center;color:var(--muted)}.badge{font-size:.72rem;padding:4px 7px;border-radius:999px;background:#f0f2f4;color:#59616a}.history-actions{display:flex;gap:6px}.icon-btn{border:1px solid #d5d9df;background:#fff;border-radius:8px;padding:6px 8px}.footer-note{font-size:.75rem;color:#8a929a;margin-top:12px}.lang{font-size:.75rem;color:#77818b;margin-top:3px}@media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.card{border-radius:16px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{align-items:flex-start}.balance{font-size:2.3rem}.btn{flex:1}.actions{display:grid;grid-template-columns:1fr 1fr}.ratio-wrap{grid-template-columns:1fr 1fr}.row{align-items:flex-start}}@media(min-width:900px){#inputPanel .card{position:sticky;top:16px}#inputPanel .card{padding:14px}.form-grid{gap:10px}.field{gap:4px}.details{margin-top:8px}.ratio-wrap{margin-top:8px;gap:10px}.quick-picks{margin-top:5px}.section-title{margin-bottom:10px}input,select{padding:9px 11px}.seg button{padding:10px}.btn{padding:10px 14px}}
 .modal-backdrop{position:fixed;inset:0;background:rgba(10,30,20,.42);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}.modal-backdrop.show{display:flex}.modal-card{width:min(440px,100%);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.22)}.modal-card h3{margin:0 0 10px}.modal-card .modal-message{white-space:pre-line;line-height:1.6;color:var(--text)}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.modal-actions button{min-width:110px}
@@ -14,7 +14,7 @@
 .submit-main{width:100%;font-size:1rem;padding:13px 18px}
 .clear-link{align-self:flex-end;border:0;background:transparent;color:var(--muted);font-size:.78rem;padding:4px 2px;text-decoration:underline;text-underline-offset:2px}
 .clear-link:hover{color:var(--text)}
-/* v0.7.1: Supabase Auth login + password recovery test */
+/* v0.8: Supabase Auth + Database */
 #inputPanel .form-grid{grid-template-columns:1fr}
 #inputPanel .field.full{grid-column:1/-1}
 @media(min-width:480px){#inputPanel .compact-pair{grid-column:auto}}
@@ -32,6 +32,8 @@
 .auth-card h2{margin:22px 0 4px}.auth-card .field input{width:100%}
 .auth-note{line-height:1.55;margin-bottom:14px}
 #recoveryPanel{display:none}
+.db-error{background:#fff0ee;color:var(--danger);border:1px solid #f2c7c2}
+button:disabled{opacity:.55;cursor:wait}
 </style>
 </head>
 <body>
@@ -41,7 +43,7 @@
     <div class="small" style="margin-top:4px">だいじ × かんそく</div>
     <div id="loginPanel">
       <h2>ログイン</h2>
-      <div class="small auth-note">Supabase Auth 接続テスト v0.7.1</div>
+      <div class="small auth-note">Supabase Auth + DB v0.8</div>
       <div class="field"><label>メールアドレス</label><input id="loginEmail" type="email" autocomplete="username" placeholder="email@example.com"></div>
       <div class="field" style="margin-top:10px"><label>パスワード</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="パスワード"></div>
       <button id="loginButton" class="btn primary" style="width:100%;margin-top:14px">ログインする</button>
@@ -58,7 +60,7 @@
   </div>
 </div>
 <div id="mainApp" class="app" style="display:none">
-  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div class="small">だいじ × かんそく</div></div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div id="authUserChip" class="chip">Supabase接続中</div><button id="logoutButton" class="btn secondary" style="padding:6px 10px">ログアウト</button><div class="chip">試作 v0.7.1 / 支出は端末内保存</div></div></div>
+  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div class="small">だいじ × かんそく</div></div><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end"><div id="authUserChip" class="chip">Supabase接続中</div><button id="logoutButton" class="btn secondary" style="padding:6px 10px">ログアウト</button><div id="dbStatusChip" class="chip">v0.8 / DB読込中…</div></div></div>
 
   <div class="tabs">
     <button class="tab active" data-tab="home">ホーム</button>
@@ -105,7 +107,7 @@
       <div class="card preview-card">
         <div class="section-title">登録するとこう動きます</div>
         <div id="preview" class="settlement-box">金額と支払者を入れると、ここに立替の向きを表示します。</div>
-        <div class="footer-note">ログイン認証は Supabase に接続済みです。支出・精算データは v0.7.1 ではまだこのブラウザの localStorage に保存されます。</div>
+        <div class="footer-note">支出・精算データは Supabase Database に保存されます。別端末からログインしても同じ帳簿を利用できます。</div>
       </div>
     </div>
   </div>
@@ -137,14 +139,34 @@ const SUPABASE_PUBLISHABLE_KEY='sb_publishable_aiB7Hp3ojZpsgbpa19W57A_XGodIZ4r';
 const supabaseClient=supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
 
 let recoveryMode=false;
+let state={expenses:[],settlements:[]};
+let payer='だいじ';
+let householdId=null;
+let currentUser=null;
+let currentDisplayName='';
+let loadedUserId=null;
+let loadingCloud=false;
+let editingExpenseId=null;
 
+const yen=n=>new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:0}).format(Math.round(n));
+const monthOf=d=>String(d||'').slice(0,7);
+const today=()=>new Date().toISOString().slice(0,10);
+const fmtDate=d=>new Date(d+'T00:00:00').toLocaleDateString('ja-JP');
+const fromDbTime=v=>v?new Date(v).getTime():0;
+
+function setDbStatus(text,isError=false){
+  const chip=document.getElementById('dbStatusChip');
+  if(!chip)return;
+  chip.textContent=text;
+  chip.classList.toggle('db-error',isError);
+}
 function showLoginView(message=''){
   recoveryMode=false;
   document.getElementById('loginPanel').style.display='block';
   document.getElementById('recoveryPanel').style.display='none';
   document.getElementById('authGate').style.display='grid';
   document.getElementById('mainApp').style.display='none';
-  if(message) document.getElementById('loginMessage').textContent=message;
+  document.getElementById('loginMessage').textContent=message;
 }
 function showRecoveryView(){
   recoveryMode=true;
@@ -155,7 +177,7 @@ function showRecoveryView(){
   document.getElementById('recoveryMessage').textContent='';
 }
 function setAuthView(session){
-  if(recoveryMode) return;
+  if(recoveryMode)return;
   const loggedIn=!!session?.user;
   document.getElementById('loginPanel').style.display='block';
   document.getElementById('recoveryPanel').style.display='none';
@@ -164,6 +186,9 @@ function setAuthView(session){
   if(loggedIn){
     const email=session.user.email||'ログイン済み';
     document.getElementById('authUserChip').textContent=`Supabase ✓ ${email}`;
+    initializeCloud(session.user);
+  } else {
+    state={expenses:[],settlements:[]}; householdId=null; currentUser=null; loadedUserId=null;
   }
 }
 async function initAuth(){
@@ -171,106 +196,118 @@ async function initAuth(){
   setAuthView(session);
 }
 document.getElementById('loginButton').addEventListener('click',async()=>{
-  const btn=document.getElementById('loginButton');
-  const msg=document.getElementById('loginMessage');
-  const email=document.getElementById('loginEmail').value.trim();
-  const password=document.getElementById('loginPassword').value;
+  const btn=document.getElementById('loginButton'),msg=document.getElementById('loginMessage');
+  const email=document.getElementById('loginEmail').value.trim(),password=document.getElementById('loginPassword').value;
   if(!email||!password){msg.textContent='メールアドレスとパスワードを入力してください。';return}
   btn.disabled=true;msg.textContent='Supabaseで確認中…';
   const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
   btn.disabled=false;
   if(error){msg.textContent=`ログインできませんでした：${error.message}`;return}
-  msg.textContent='ログインしました。';
-  setAuthView(data.session);
+  msg.textContent='ログインしました。';setAuthView(data.session);
 });
 document.getElementById('loginPassword').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('loginButton').click()});
 
 document.getElementById('updatePasswordButton').addEventListener('click',async()=>{
-  const btn=document.getElementById('updatePasswordButton');
-  const msg=document.getElementById('recoveryMessage');
-  const p1=document.getElementById('newPassword').value;
-  const p2=document.getElementById('newPasswordConfirm').value;
+  const btn=document.getElementById('updatePasswordButton'),msg=document.getElementById('recoveryMessage');
+  const p1=document.getElementById('newPassword').value,p2=document.getElementById('newPasswordConfirm').value;
   if(!p1||!p2){msg.textContent='新しいパスワードを2回入力してください。';return}
   if(p1!==p2){msg.textContent='2つのパスワードが一致していません。';return}
   if(p1.length<6){msg.textContent='パスワードは6文字以上にしてください。';return}
   btn.disabled=true;msg.textContent='パスワードを更新中…';
   const {error}=await supabaseClient.auth.updateUser({password:p1});
   if(error){btn.disabled=false;msg.textContent=`変更できませんでした：${error.message}`;return}
-  msg.textContent='変更しました。ログイン画面に戻ります…';
-  await supabaseClient.auth.signOut();
-  document.getElementById('newPassword').value='';
-  document.getElementById('newPasswordConfirm').value='';
-  btn.disabled=false;
+  msg.textContent='変更しました。ログイン画面に戻ります…';await supabaseClient.auth.signOut();
+  newPassword.value='';newPasswordConfirm.value='';btn.disabled=false;
   showLoginView('パスワードを変更しました。新しいパスワードでログインしてください。');
 });
-document.getElementById('newPasswordConfirm').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('updatePasswordButton').click()});
-
+document.getElementById('newPasswordConfirm').addEventListener('keydown',e=>{if(e.key==='Enter')updatePasswordButton.click()});
 document.getElementById('logoutButton').addEventListener('click',async()=>{await supabaseClient.auth.signOut();showLoginView()});
-supabaseClient.auth.onAuthStateChange((event,session)=>{
-  if(event==='PASSWORD_RECOVERY'){
-    showRecoveryView();
-    return;
-  }
-  if(!recoveryMode) setAuthView(session);
-});
-initAuth();
+supabaseClient.auth.onAuthStateChange((event,session)=>{if(event==='PASSWORD_RECOVERY'){showRecoveryView();return}if(!recoveryMode)setAuthView(session)});
 
-const KEY='futari-settle-v03';
-const oldState=localStorage.getItem('futari-settle-v02')||localStorage.getItem('futari-settle-v01');
-let state=JSON.parse(localStorage.getItem(KEY)||oldState||'null')||{expenses:[],settlements:[]};
-const uid=()=>globalThis.crypto?.randomUUID?.()||('id-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
-let payer='だいじ';
-const yen=n=>new Intl.NumberFormat('ja-JP',{style:'currency',currency:'JPY',maximumFractionDigits:0}).format(Math.round(n));
-const monthOf=d=>d.slice(0,7);
-const today=()=>new Date().toISOString().slice(0,10);
-const fmtDate=d=>new Date(d+'T00:00:00').toLocaleDateString('ja-JP');
-function save(){localStorage.setItem(KEY,JSON.stringify(state));render()}
+async function initializeCloud(user){
+  if(loadingCloud||loadedUserId===user.id)return;
+  loadingCloud=true;currentUser=user;setDbStatus('v0.8 / DB接続中…');
+  try{
+    const {data:member,error:memberError}=await supabaseClient.from('household_members').select('household_id, display_name').eq('user_id',user.id).limit(1).maybeSingle();
+    if(memberError)throw memberError;
+    if(!member)throw new Error('このユーザーは household_members に登録されていません。');
+    householdId=member.household_id;currentDisplayName=member.display_name||'';
+    if(currentDisplayName==='だいじ'||currentDisplayName==='かんそく')setPayer(currentDisplayName);
+    await loadCloudData();
+    loadedUserId=user.id;
+    setDbStatus(`v0.8 / DB ✓ ${currentDisplayName||'接続済み'}`);
+  }catch(err){
+    console.error(err);setDbStatus('v0.8 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
+  }finally{loadingCloud=false}
+}
+async function loadCloudData(){
+  if(!householdId)return;
+  const [expenseRes,settlementRes,monthRes]=await Promise.all([
+    supabaseClient.from('expenses').select('*').eq('household_id',householdId).order('expense_date',{ascending:false}).order('created_at',{ascending:false}),
+    supabaseClient.from('settlements').select('*').eq('household_id',householdId).order('settled_at',{ascending:false}),
+    supabaseClient.from('settlement_months').select('settlement_id, month')
+  ]);
+  if(expenseRes.error)throw expenseRes.error;if(settlementRes.error)throw settlementRes.error;if(monthRes.error)throw monthRes.error;
+  state.expenses=(expenseRes.data||[]).map(r=>({id:r.id,date:r.expense_date,payer:r.payer,amount:Number(r.amount),ratioD:Number(r.ratio_daiji),ratioK:Number(r.ratio_kansoku),category:r.category||'',shop:r.shop||'',memo:r.memo||'',createdAt:fromDbTime(r.created_at)}));
+  const monthsBySettlement={};
+  (monthRes.data||[]).forEach(r=>{(monthsBySettlement[r.settlement_id]??=[]).push(monthOf(r.month))});
+  state.settlements=(settlementRes.data||[]).map(r=>({id:r.id,through:monthOf(r.through_month),months:(monthsBySettlement[r.id]||[]).sort(),amount:Number(r.amount),settledAt:r.settled_at,createdAt:fromDbTime(r.created_at)}));
+  render();updateDuplicateWarning();
+}
+async function refreshCloud(){try{setDbStatus('v0.8 / 更新中…');await loadCloudData();setDbStatus(`v0.8 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v0.8 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
+
 function showTab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 function setPayer(p){payer=p;document.getElementById('payerD').classList.toggle('active',p==='だいじ');document.getElementById('payerK').classList.toggle('active',p==='かんそく');updateRatioPresetEmphasis();updatePreview()}
 function updateRatioPresetEmphasis(){const d=document.getElementById('ratioDaiji'),k=document.getElementById('ratioKansoku');d.classList.remove('recommended','unlikely');k.classList.remove('recommended','unlikely');if(payer==='かんそく'){d.classList.add('recommended');k.classList.add('unlikely')}else{k.classList.add('recommended');d.classList.add('unlikely')}}
 function presetRatio(d,k){ratioD.value=d;ratioK.value=k;updatePreview()}
 ['amount','ratioD','ratioK'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{updatePreview();updateDuplicateWarning()}));['date','shop'].forEach(id=>document.getElementById(id).addEventListener('input',updateDuplicateWarning));
-
 function normText(v){return String(v||'').trim().replace(/\s+/g,' ').toLocaleLowerCase('ja-JP')}
-function duplicateMatches(){const d=date.value||today(),sh=normText(shop.value);if(!sh)return {level:0,matches:[]};const same=state.expenses.filter(e=>e.date===d&&normText(e.shop)===sh);if(!same.length)return {level:0,matches:[]};const a=Number(amount.value||0);const exact=a>0?same.filter(e=>Number(e.amount)===a):[];return exact.length?{level:2,matches:exact}:{level:1,matches:same}}
-function updateDuplicateWarning(){const r=duplicateMatches(),btn=document.getElementById('submitExpense'),box=document.getElementById('duplicateWarning');if(!btn||!box)return;btn.classList.remove('warn','danger-warning');box.className='duplicate-warning';if(!r.level){btn.textContent='支出を登録する';box.textContent='';return}const e=r.matches[0],detail=`${fmtDate(e.date)} / ${e.category||'（品目なし）'} / ${yen(e.amount)} / ${e.payer}支払`;if(r.level===2){btn.classList.add('danger-warning');btn.textContent='⚠ 二重入力かも？ 登録する';box.classList.add('show','danger-warning');box.textContent=`同日・同じ支払先・同金額の記録があります：${detail}${r.matches.length>1?` ほか${r.matches.length-1}件`:''}`}else{btn.classList.add('warn');btn.textContent='⚠ 支出を登録する';box.classList.add('show','warn');box.textContent=`同じ日の「${shop.value.trim()}」が既に${r.matches.length}件あります：${detail}`}}
-function debtDelta(e){const dShare=e.amount*(e.ratioD/100), kShare=e.amount*(e.ratioK/100);return e.payer==='だいじ'?kShare:-dShare}
+function duplicateMatches(){const d=date.value||today(),sh=normText(shop.value);if(!sh)return {level:0,matches:[]};const same=state.expenses.filter(e=>e.id!==editingExpenseId&&e.date===d&&normText(e.shop)===sh);if(!same.length)return {level:0,matches:[]};const a=Number(amount.value||0);const exact=a>0?same.filter(e=>Number(e.amount)===a):[];return exact.length?{level:2,matches:exact}:{level:1,matches:same}}
+function updateDuplicateWarning(){const r=duplicateMatches(),btn=submitExpense,box=duplicateWarning;if(!btn||!box)return;btn.classList.remove('warn','danger-warning');box.className='duplicate-warning';if(!r.level){btn.textContent=editingExpenseId?'変更を保存する':'支出を登録する';box.textContent='';return}const e=r.matches[0],detail=`${fmtDate(e.date)} / ${e.category||'（品目なし）'} / ${yen(e.amount)} / ${e.payer}支払`;if(r.level===2){btn.classList.add('danger-warning');btn.textContent='⚠ 二重入力かも？ 保存する';box.classList.add('show','danger-warning');box.textContent=`同日・同じ支払先・同金額の記録があります：${detail}${r.matches.length>1?` ほか${r.matches.length-1}件`:''}`}else{btn.classList.add('warn');btn.textContent='⚠ 保存する';box.classList.add('show','warn');box.textContent=`同じ日の「${shop.value.trim()}」が既に${r.matches.length}件あります：${detail}`}}
+function debtDelta(e){const dShare=e.amount*(e.ratioD/100),kShare=e.amount*(e.ratioK/100);return e.payer==='だいじ'?kShare:-dShare}
 function labelDelta(v){if(Math.abs(v)<.5)return '差額なし';return v>0?`かんそく → だいじ ${yen(v)}`:`だいじ → かんそく ${yen(-v)}`}
-function addExpense(){const amount=Number(document.getElementById('amount').value);const d=Number(ratioD.value),k=Number(ratioK.value);if(!amount||amount<=0)return toast('金額を入れてください');if(d+k!==100)return toast('負担割合は合計100%にしてください');state.expenses.push({id:uid(),date:date.value||today(),payer,amount,ratioD:d,ratioK:k,category:category.value.trim(),shop:shop.value.trim(),memo:memo.value.trim(),createdAt:Date.now()});save();toast('登録しました');clearForm();showTab('home')}
-function clearForm(){amount.value='';category.value='';shop.value='';memo.value='';ratioD.value=50;ratioK.value=50;date.value=today();setPayer('だいじ');updatePreview();updateDuplicateWarning()}
+async function addExpense(){
+  if(!householdId||!currentUser)return toast('DB接続が完了していません');
+  const a=Number(amount.value),d=Number(ratioD.value),k=Number(ratioK.value);
+  if(!a||a<=0)return toast('金額を入れてください');if(d+k!==100)return toast('負担割合は合計100%にしてください');
+  const payload={household_id:householdId,expense_date:date.value||today(),payer,amount:a,ratio_daiji:d,ratio_kansoku:k,category:category.value.trim(),shop:shop.value.trim(),memo:memo.value.trim(),created_by:currentUser.id};
+  submitExpense.disabled=true;
+  let error;
+  if(editingExpenseId)({error}=await supabaseClient.from('expenses').update(payload).eq('id',editingExpenseId).eq('household_id',householdId));
+  else ({error}=await supabaseClient.from('expenses').insert(payload));
+  submitExpense.disabled=false;
+  if(error){console.error(error);return toast(`保存できませんでした：${error.message}`)}
+  toast(editingExpenseId?'変更を保存しました':'登録しました');editingExpenseId=null;clearForm();await refreshCloud();showTab('home');
+}
+function clearForm(){editingExpenseId=null;amount.value='';category.value='';shop.value='';memo.value='';ratioD.value=50;ratioK.value=50;date.value=today();setPayer((currentDisplayName==='だいじ'||currentDisplayName==='かんそく')?currentDisplayName:'だいじ');updatePreview();updateDuplicateWarning()}
 function updatePreview(){const a=Number(amount.value||0),d=Number(ratioD.value||0),k=Number(ratioK.value||0);if(!a){preview.textContent='金額と支払者を入れると、ここに立替の向きを表示します。';return}const e={amount:a,payer,ratioD:d,ratioK:k};preview.innerHTML=`<strong>${labelDelta(debtDelta(e))}</strong><div class="small" style="margin-top:6px">だいじ負担 ${yen(a*d/100)} / かんそく負担 ${yen(a*k/100)}</div>`}
 function settledMonths(){const s=new Set();state.settlements.forEach(x=>x.months.forEach(m=>s.add(m)));return s}
 function monthlyMap(){const settled=settledMonths(),map={};state.expenses.forEach(e=>{const m=monthOf(e.date);if(settled.has(m))return;map[m]=(map[m]||0)+debtDelta(e)});return map}
 function totalBalance(){return Object.values(monthlyMap()).reduce((a,b)=>a+b,0)}
 function render(){renderSuggestions();const bal=totalBalance();balance.textContent=yen(Math.abs(bal));direction.textContent=labelDelta(bal);const map=monthlyMap();const months=Object.keys(map).sort().reverse();monthList.innerHTML=months.length?months.map(m=>`<div class="row"><div><strong>${m.replace('-','年')}月</strong><div class="meta">未精算</div></div><div class="amount">${labelDelta(map[m])}</div></div>`).join(''):'<div class="empty">未精算の支出はありません</div>';const cm=today().slice(0,7);currentMonthSummary.innerHTML=`<div><strong>${cm.replace('-','年')}月</strong><div class="meta">今月の差額</div></div><div class="amount">${labelDelta(map[cm]||0)}</div>`;
-const fm=filterMonth?.value||'',ft=(filterText?.value||'').toLowerCase();const items=[...state.expenses].sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt).filter(e=>(!fm||monthOf(e.date)===fm)&&(!ft||[e.category,e.shop,e.memo,e.payer].join(' ').toLowerCase().includes(ft)));historyList.innerHTML=items.length?items.map(e=>`<div class="row"><div><strong>${e.category||'（品目なし）'} ${e.shop?`@ ${e.shop}`:''}</strong><div class="meta">${fmtDate(e.date)} / ${e.payer}が支払 / ${e.ratioD}:${e.ratioK}</div>${e.memo?`<div class="lang">${e.memo}</div>`:''}</div><div style="text-align:right"><div class="amount">${yen(e.amount)}</div><div class="meta">${labelDelta(debtDelta(e))}</div><div class="history-actions"><button class="icon-btn" onclick="editExpense('${e.id}')">編集</button><button class="icon-btn" onclick="deleteExpense('${e.id}')">削除</button></div></div></div>`).join(''):'<div class="empty">該当する履歴はありません</div>';
-const asc=Object.keys(map).sort();settlementOptions.innerHTML=asc.length?asc.map((m,i)=>{const included=asc.slice(0,i+1);const sum=included.reduce((s,x)=>s+map[x],0);return `<label><input type="radio" name="settleMonth" value="${m}" ${i===asc.length-1?'checked':''}> ${m.replace('-','年')}月まで <strong>${labelDelta(sum)}</strong></label>`}).join(''):'<div class="empty">精算できる未精算月はありません</div>';settlementHistory.innerHTML=state.settlements.length?[...state.settlements].sort((a,b)=>b.settledAt.localeCompare(a.settledAt)).map(s=>`<div class="row"><div><strong>${s.through.replace('-','年')}月まで精算</strong><div class="meta">${fmtDate(s.settledAt)} / ${s.months.length}か月分</div></div><div style="text-align:right"><div class="amount">${labelDelta(s.amount)}</div><div class="history-actions"><button class="icon-btn" onclick="undoSettlement('${s.id}')">精算を取り消す</button></div></div></div>`).join(''):'<div class="empty">まだ精算履歴はありません</div>'}
+  const fm=filterMonth?.value||'',ft=(filterText?.value||'').toLowerCase();const items=[...state.expenses].sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt).filter(e=>(!fm||monthOf(e.date)===fm)&&(!ft||[e.category,e.shop,e.memo,e.payer].join(' ').toLowerCase().includes(ft)));historyList.innerHTML=items.length?items.map(e=>`<div class="row"><div><strong>${escapeHtml(e.category||'（品目なし）')} ${e.shop?`@ ${escapeHtml(e.shop)}`:''}</strong><div class="meta">${fmtDate(e.date)} / ${e.payer}が支払 / ${e.ratioD}:${e.ratioK}</div>${e.memo?`<div class="lang">${escapeHtml(e.memo)}</div>`:''}</div><div style="text-align:right"><div class="amount">${yen(e.amount)}</div><div class="meta">${labelDelta(debtDelta(e))}</div><div class="history-actions"><button class="icon-btn" onclick="editExpense('${e.id}')">編集</button><button class="icon-btn" onclick="deleteExpense('${e.id}')">削除</button></div></div></div>`).join(''):'<div class="empty">該当する履歴はありません</div>';
+  const asc=Object.keys(map).sort();settlementOptions.innerHTML=asc.length?asc.map((m,i)=>{const included=asc.slice(0,i+1),sum=included.reduce((s,x)=>s+map[x],0);return `<label><input type="radio" name="settleMonth" value="${m}" ${i===asc.length-1?'checked':''}> ${m.replace('-','年')}月まで <strong>${labelDelta(sum)}</strong></label>`}).join(''):'<div class="empty">精算できる未精算月はありません</div>';settlementHistory.innerHTML=state.settlements.length?[...state.settlements].sort((a,b)=>b.settledAt.localeCompare(a.settledAt)).map(s=>`<div class="row"><div><strong>${s.through.replace('-','年')}月まで精算</strong><div class="meta">${fmtDate(s.settledAt)} / ${s.months.length}か月分</div></div><div style="text-align:right"><div class="amount">${labelDelta(s.amount)}</div><div class="history-actions"><button class="icon-btn" onclick="undoSettlement('${s.id}')">精算を取り消す</button></div></div></div>`).join(''):'<div class="empty">まだ精算履歴はありません</div>'}
 let modalResolve=null;function askConfirm(title,message,okText='実行する'){modalTitle.textContent=title;modalMessage.textContent=message;modalOk.textContent=okText;modal.classList.add('show');return new Promise(r=>modalResolve=r)}function closeModal(v){modal.classList.remove('show');if(modalResolve){const r=modalResolve;modalResolve=null;r(v)}}modalCancel.onclick=()=>closeModal(false);modalOk.onclick=()=>closeModal(true);modal.addEventListener('click',e=>{if(e.target===modal)closeModal(false)});
-async function deleteExpense(id){const e=state.expenses.find(x=>x.id===id);if(!e)return;const msg=`${fmtDate(e.date)}  ${e.category||'（品目なし）'}${e.shop?' @ '+e.shop:''}
-${yen(e.amount)} / ${e.payer}が支払
-
-削除すると精算額も再計算されます。`;if(await askConfirm('この支出を削除しますか？',msg,'削除する')){state.expenses=state.expenses.filter(x=>x.id!==id);save();toast('支出を削除しました')}}
-async function undoSettlement(id){const s=state.settlements.find(x=>x.id===id);if(!s)return;const msg=`${s.through.replace('-','年')}月まで
-${labelDelta(s.amount)}
-
-取り消すと、この期間の支出が再び未精算になります。`;if(await askConfirm('精算記録を取り消しますか？',msg,'精算を取り消す')){state.settlements=state.settlements.filter(x=>x.id!==id);save();toast('精算を取り消しました')}}
+async function deleteExpense(id){const e=state.expenses.find(x=>x.id===id);if(!e)return;const msg=`${fmtDate(e.date)}  ${e.category||'（品目なし）'}${e.shop?' @ '+e.shop:''}\n${yen(e.amount)} / ${e.payer}が支払\n\n削除すると精算額も再計算されます。`;if(!await askConfirm('この支出を削除しますか？',msg,'削除する'))return;const {error}=await supabaseClient.from('expenses').delete().eq('id',id).eq('household_id',householdId);if(error)return toast(`削除できませんでした：${error.message}`);await refreshCloud();toast('支出を削除しました')}
+async function undoSettlement(id){const s=state.settlements.find(x=>x.id===id);if(!s)return;const msg=`${s.through.replace('-','年')}月まで\n${labelDelta(s.amount)}\n\n取り消すと、この期間の支出が再び未精算になります。`;if(!await askConfirm('精算記録を取り消しますか？',msg,'精算を取り消す'))return;const {error}=await supabaseClient.from('settlements').delete().eq('id',id).eq('household_id',householdId);if(error)return toast(`取り消せませんでした：${error.message}`);await refreshCloud();toast('精算を取り消しました')}
 function recentUnique(field){const seen=new Set(),out=[];[...state.expenses].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0)).forEach(e=>{const v=(e[field]||'').trim();if(v&&!seen.has(v)){seen.add(v);out.push(v)}});return out}
 function topValues(field,n=3){const c={};state.expenses.forEach(e=>{const v=(e[field]||'').trim();if(v)c[v]=(c[v]||0)+1});return Object.entries(c).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'ja')).slice(0,n).map(x=>x[0])}
 function renderSuggestions(){const cats=recentUnique('category'),shs=recentUnique('shop');categories.innerHTML=cats.map(v=>`<option value="${escapeHtml(v)}"></option>`).join('');shops.innerHTML=shs.map(v=>`<option value="${escapeHtml(v)}"></option>`).join('');categoryTop.innerHTML=topValues('category').map(v=>`<button type="button" data-quick-field="category" data-quick-value="${escapeAttr(v)}">${escapeHtml(v)}</button>`).join('');shopTop.innerHTML=topValues('shop').map(v=>`<button type="button" data-quick-field="shop" data-quick-value="${escapeAttr(v)}">${escapeHtml(v)}</button>`).join('')}
 function pickQuick(id,v){document.getElementById(id).value=v;document.getElementById(id).dispatchEvent(new Event('input',{bubbles:true}));updateDuplicateWarning()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-quick-field]');if(b)pickQuick(b.dataset.quickField,b.dataset.quickValue)});
-function escapeAttr(v){return escapeHtml(v)}
-function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function editExpense(id){const e=state.expenses.find(x=>x.id===id);if(!e)return;setPayer(e.payer);amount.value=e.amount;date.value=e.date;category.value=e.category;shop.value=e.shop;memo.value=e.memo;ratioD.value=e.ratioD;ratioK.value=e.ratioK;state.expenses=state.expenses.filter(x=>x.id!==id);save();updatePreview();showTab('input');toast('編集内容を読み込みました。登録で保存します')}
-async function settleThrough(){const r=document.querySelector('input[name="settleMonth"]:checked');if(!r)return toast('精算する月がありません');const map=monthlyMap(),asc=Object.keys(map).sort(),through=r.value,months=asc.filter(m=>m<=through);const amount=months.reduce((s,m)=>s+map[m],0);const ok=await askConfirm('この内容で精算しますか？',`${through.replace('-','年')}月まで
-${labelDelta(amount)}
+function escapeAttr(v){return escapeHtml(v)}function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function editExpense(id){const e=state.expenses.find(x=>x.id===id);if(!e)return;editingExpenseId=id;setPayer(e.payer);amount.value=e.amount;date.value=e.date;category.value=e.category;shop.value=e.shop;memo.value=e.memo;ratioD.value=e.ratioD;ratioK.value=e.ratioK;updatePreview();updateDuplicateWarning();showTab('input');toast('編集内容を読み込みました')}
+async function settleThrough(){const r=document.querySelector('input[name="settleMonth"]:checked');if(!r)return toast('精算する月がありません');const map=monthlyMap(),asc=Object.keys(map).sort(),through=r.value,months=asc.filter(m=>m<=through),sum=months.reduce((s,m)=>s+map[m],0);if(!await askConfirm('この内容で精算しますか？',`${through.replace('-','年')}月まで\n${labelDelta(sum)}\n\n対象期間を精算済みにします。`,'精算する'))return;
+  const {data:settlement,error}=await supabaseClient.from('settlements').insert({household_id:householdId,through_month:`${through}-01`,amount:Math.round(sum),settled_at:today(),created_by:currentUser.id}).select('id').single();
+  if(error)return toast(`精算を保存できませんでした：${error.message}`);
+  const rows=months.map(m=>({settlement_id:settlement.id,month:`${m}-01`}));
+  const {error:monthError}=await supabaseClient.from('settlement_months').insert(rows);
+  if(monthError){await supabaseClient.from('settlements').delete().eq('id',settlement.id);return toast(`精算月を保存できませんでした：${monthError.message}`)}
+  await refreshCloud();toast('精算済みにしました');showTab('home')}
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2400)}
 
-対象期間を精算済みにします。`,'精算する');if(!ok)return;state.settlements.push({id:uid(),through,months,amount,settledAt:today(),createdAt:Date.now()});save();toast('精算済みにしました');showTab('home')}
-function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1800)}
-function seed(){if(state.expenses.length||state.settlements.length)return;const demo=[
-['2026-08-02','だいじ',23959,50,50,'電気代','NextPower',''],['2026-08-03','かんそく',2300,50,50,'食事','サイゼ',''],['2026-08-05','かんそく',13389,50,50,'食材','スーパーバリュー',''],['2026-07-14','だいじ',8100,50,50,'二丁目帰り','タクシー',''],['2026-07-21','かんそく',12000,100,0,'ガジェット','楽天市場','だいじ個人分を立替']];demo.forEach(x=>state.expenses.push({id:uid(),date:x[0],payer:x[1],amount:x[2],ratioD:x[3],ratioK:x[4],category:x[5],shop:x[6],memo:x[7],createdAt:Date.now()}));save()}
-date.value=today();seed();render();updateRatioPresetEmphasis();updatePreview();updateDuplicateWarning();
+date.value=today();render();updateRatioPresetEmphasis();updatePreview();updateDuplicateWarning();initAuth();
 </script>
 </body>
 </html>
