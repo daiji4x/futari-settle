@@ -97,9 +97,9 @@ button:disabled{opacity:.55;cursor:wait}
           <div class="field full"><label>支払った人</label><div class="seg"><button id="payerD" class="active" onclick="setPayer('だいじ')">だいじ</button><button id="payerK" onclick="setPayer('かんそく')">かんそく</button></div></div>
           <div class="field compact-pair"><label>金額</label><input id="amount" inputmode="numeric" placeholder="例：3800" /></div>
           <div class="field compact-pair"><label>日付</label><input id="date" type="date" /></div>
-          <div class="field content-pair"><label>品目</label><input id="category" list="categories" placeholder="食材" /><datalist id="categories"></datalist><div id="categoryTop" class="quick-picks"></div></div>
-          <div class="field content-pair"><label>お店・支払先</label><input id="shop" list="shops" placeholder="サミット" /><datalist id="shops"></datalist><div id="shopTop" class="quick-picks"></div></div>
-          <div class="field full"><label>メモ（任意）</label><input id="memo" placeholder="楽天カードで立替 など" /></div>
+          <div class="field content-pair"><label>品目</label><input id="category" list="categories" placeholder="例：食材" /><datalist id="categories"></datalist><div id="categoryTop" class="quick-picks"></div></div>
+          <div class="field content-pair"><label>お店・支払先</label><input id="shop" list="shops" placeholder="例：サミット" /><datalist id="shops"></datalist><div id="shopTop" class="quick-picks"></div></div>
+          <div class="field full"><label>メモ（任意）</label><input id="memo" placeholder="例：楽天カードで立替 など" /></div>
         </div>
         <details class="details"><summary>負担割合を変更（通常は50:50）</summary><div class="ratio-preset"><button id="ratio5050" class="ratio-main" onclick="presetRatio(50,50)">50 : 50（割り勘）</button><button id="ratioDaiji" onclick="presetRatio(100,0)">だいじの買物を立替</button><button id="ratioKansoku" onclick="presetRatio(0,100)">かんそくの買物を立替</button></div><div class="ratio-wrap advanced-ratio"><div class="field"><label>だいじ負担 %</label><input id="ratioD" type="number" min="0" max="100" value="50" /></div><div class="field"><label>かんそく負担 %</label><input id="ratioK" type="number" min="0" max="100" value="50" /></div></div></details>
         <div class="submit-area"><button id="submitExpense" class="btn primary submit-main" onclick="addExpense()">支出を登録する</button><div id="duplicateWarning" class="duplicate-warning"></div><button class="clear-link" onclick="clearForm()">入力をクリア</button></div>
