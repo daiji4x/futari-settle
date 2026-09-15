@@ -151,7 +151,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
     <div class="small" style="margin-top:4px">だいじ × かんそく</div>
     <div id="loginPanel">
       <h2>ログイン</h2>
-      <div class="small auth-note">Supabase Auth + DB v1.3.1</div>
+      <div class="small auth-note">Supabase Auth + DB v1.4.1</div>
       <div class="field"><label>メールアドレス</label><input id="loginEmail" type="email" autocomplete="username" placeholder="email@example.com"></div>
       <div class="field" style="margin-top:10px"><label>パスワード</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="パスワード"></div>
       <button id="loginButton" class="btn primary" style="width:100%;margin-top:14px">ログインする</button>
@@ -445,7 +445,7 @@ supabaseClient.auth.onAuthStateChange((event,session)=>{if(event==='PASSWORD_REC
 
 async function initializeCloud(user){
   if(loadingCloud||loadedUserId===user.id)return;
-  loadingCloud=true;currentUser=user;setDbStatus('v1.3.1 / DB接続中…');
+  loadingCloud=true;currentUser=user;setDbStatus('v1.4.1 / DB接続中…');
   try{
     const {data:member,error:memberError}=await supabaseClient.from('household_members').select('household_id, display_name').eq('user_id',user.id).limit(1).maybeSingle();
     if(memberError)throw memberError;
@@ -456,9 +456,9 @@ async function initializeCloud(user){
     await ensureRentYear(rentYear);
     await loadCloudData();
     loadedUserId=user.id;
-    setDbStatus(`v1.3.1 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
+    setDbStatus(`v1.4.1 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
   }catch(err){
-    console.error(err);setDbStatus('v1.3.1 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
+    console.error(err);setDbStatus('v1.4.1 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
   }finally{loadingCloud=false}
 }
 async function loadCloudData(){
@@ -507,7 +507,7 @@ async function changeRentYear(delta){
   const next=rentYear+delta;
   if(next<2026){toast('家賃管理は2026年以降です');return}
   rentYear=next;
-  try{setDbStatus(`v1.3.1 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
+  try{setDbStatus(`v1.4.1 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
 }
 function renderRent(){
   const grid=document.getElementById('rentGrid');if(!grid)return;
