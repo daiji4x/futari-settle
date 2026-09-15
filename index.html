@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>ふたり精算（にゃんにゃん費） v1.3.1</title>
+<title>ふたり精算（にゃんにゃん費） v1.4</title>
 <style>
 :root{--bg:#f3f7f4;--card:#fff;--text:#183126;--muted:#687a70;--line:#dce7df;--accent:#2f6b4f;--good:#26734f;--warn:#9a6a16;--danger:#b42318;--shadow:0 8px 24px rgba(25,65,45,.08)}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:0 auto;padding:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{font-weight:800;font-size:1.2rem}.chip{font-size:.8rem;background:#eef2f7;border-radius:999px;padding:6px 10px;color:#46505a}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}.hero{padding:20px}.hero .label{color:var(--muted);font-size:.9rem}.balance{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.03em;margin:8px 0}.direction{font-size:1rem;color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700}.btn.primary{background:var(--accent);color:#fff}.btn.secondary{background:#eef2f7;color:#28323c}.btn.danger{background:#fff0ee;color:var(--danger)}.section-title{font-size:1rem;font-weight:800;margin-bottom:12px}.month-list,.history-list{display:flex;flex-direction:column;gap:8px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}.row .meta{color:var(--muted);font-size:.85rem}.row .amount{font-weight:800}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.82rem;color:var(--muted);font-weight:700}input,select{width:100%;border:1px solid #d5d9df;border-radius:10px;padding:11px 12px;background:#fff;color:var(--text)}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.seg button{border:1px solid #d5d9df;background:#fff;padding:12px;border-radius:10px;font-weight:800}.seg button.active{border-color:var(--accent);background:#e6f1ea;color:#245b43}.details{margin-top:10px}.details summary{cursor:pointer;color:var(--muted);font-weight:700}.ratio-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.ratio-preset{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.ratio-preset button{border:1px solid #d5d9df;background:#fff;border-radius:9px;padding:9px 11px;transition:.15s}.ratio-preset button.recommended{border-color:var(--accent);background:#e6f1ea;color:#245b43;font-weight:850;box-shadow:0 0 0 2px rgba(45,108,223,.08)}.ratio-preset button.unlikely{opacity:.42;font-size:.78rem}.ratio-main{font-weight:800}.advanced-ratio{margin-top:10px}.quick-picks{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.quick-picks button{border:1px solid #d5d9df;background:#f8fafc;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:750;color:#3d4852}.quick-picks:before{content:"よく使う";font-size:.72rem;color:var(--muted);align-self:center;margin-right:2px}.tabs{display:flex;gap:8px;margin:18px 0 12px;overflow:auto;padding-bottom:2px}.tab{white-space:nowrap;border:0;background:transparent;padding:10px 12px;border-radius:10px;font-weight:800;color:var(--muted)}.tab.active{background:#e3eee7;color:#245b43}.panel{display:none}.panel.active{display:block}.small{font-size:.85rem;color:var(--muted)}.settlement-box{border:1px dashed #c9ced6;border-radius:12px;padding:12px;background:#fafbfc}.settlement-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}.settlement-options label{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:600}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#20262d;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:99}.toast.show{opacity:1}.empty{padding:18px;text-align:center;color:var(--muted)}.badge{font-size:.72rem;padding:4px 7px;border-radius:999px;background:#f0f2f4;color:#59616a}.history-actions{display:flex;gap:6px}.icon-btn{border:1px solid #d5d9df;background:#fff;border-radius:8px;padding:6px 8px}.footer-note{font-size:.75rem;color:#8a929a;margin-top:12px}.lang{font-size:.75rem;color:#77818b;margin-top:3px}@media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.card{border-radius:16px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{align-items:flex-start}.balance{font-size:2.3rem}.btn{flex:1}.actions{display:grid;grid-template-columns:1fr 1fr}.ratio-wrap{grid-template-columns:1fr 1fr}.row{align-items:flex-start}}@media(min-width:900px){#inputPanel .card{position:sticky;top:16px}#inputPanel .card{padding:14px}.form-grid{gap:10px}.field{gap:4px}.details{margin-top:8px}.ratio-wrap{margin-top:8px;gap:10px}.quick-picks{margin-top:5px}.section-title{margin-bottom:10px}input,select{padding:9px 11px}.seg button{padding:10px}.btn{padding:10px 14px}}
 .modal-backdrop{position:fixed;inset:0;background:rgba(10,30,20,.42);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}.modal-backdrop.show{display:flex}.modal-card{width:min(440px,100%);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.22)}.modal-card h3{margin:0 0 10px}.modal-card .modal-message{white-space:pre-line;line-height:1.6;color:var(--text)}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.modal-actions button{min-width:110px}
@@ -134,6 +134,9 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
   .mobile-maintenance-footer{display:flex;justify-content:center;align-items:center;gap:10px;margin:26px 0 8px;padding:14px 8px 4px;border-top:1px solid var(--line)}
   .mobile-maintenance-footer .manage-launch,.mobile-maintenance-footer .logout-compact{font-size:.76rem;padding:7px 9px;flex:none;width:auto}
 }
+
+/* v1.4: utility trend chart */
+.utility-launch-card{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.utility-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.utility-year-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px 0 12px}.utility-year-nav strong{min-width:110px;text-align:center;font-size:1.05rem}.utility-legend{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}.utility-toggle{border:1px solid currentColor;background:#fff;border-radius:999px;padding:8px 12px;font-weight:850}.utility-toggle.off{color:#8b9490!important;border-color:#cfd6d2;background:#f2f4f3;opacity:.7}.utility-chart-wrap{width:100%;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff}.utility-chart{display:block;width:100%;height:auto;min-height:280px}.utility-point{cursor:pointer;stroke:#fff;stroke-width:3}.utility-point-detail{text-align:center;min-height:2.5em;margin-top:10px;font-weight:750;color:var(--muted)}@media(max-width:479px){.utility-launch-card{align-items:stretch}.utility-launch-card .btn{width:100%}.utility-card{padding:12px}.utility-chart{min-height:245px}.utility-toggle{padding:7px 9px;font-size:.88rem}.utility-point-detail{font-size:.88rem}}
 </style>
 </head>
 <body>
@@ -143,7 +146,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
     <div class="small" style="margin-top:4px">だいじ × かんそく</div>
     <div id="loginPanel">
       <h2>ログイン</h2>
-      <div class="small auth-note">Supabase Auth + DB v1.3.1</div>
+      <div class="small auth-note">Supabase Auth + DB v1.4</div>
       <div class="field"><label>メールアドレス</label><input id="loginEmail" type="email" autocomplete="username" placeholder="email@example.com"></div>
       <div class="field" style="margin-top:10px"><label>パスワード</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="パスワード"></div>
       <button id="loginButton" class="btn primary" style="width:100%;margin-top:14px">ログインする</button>
@@ -160,7 +163,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
   </div>
 </div>
 <div id="mainApp" class="app" style="display:none">
-  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div id="pairNames" class="small"></div></div><div class="top-actions"><div id="authUserChip" class="chip auth-user-chip" hidden>Supabase接続中</div><div id="dbStatusChip" class="chip">v1.3.1 / DB読込中…</div><button id="manageButton" class="manage-launch" data-i18n="dataManagement">データ管理</button><button id="logoutButton" class="btn secondary logout-compact" data-i18n="logout">ログアウト</button></div></div>
+  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div id="pairNames" class="small"></div></div><div class="top-actions"><div id="authUserChip" class="chip auth-user-chip" hidden>Supabase接続中</div><div id="dbStatusChip" class="chip">v1.4 / DB読込中…</div><button id="manageButton" class="manage-launch" data-i18n="dataManagement">データ管理</button><button id="logoutButton" class="btn secondary logout-compact" data-i18n="logout">ログアウト</button></div></div>
   <div id="languageSelector" class="language-selector" aria-label="表示言語">
     <label><input type="checkbox" value="ja" checked>日本語</label>
     <label><input type="checkbox" value="en">English</label>
@@ -194,6 +197,17 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
         <div id="recurringHistoryGrid" class="recurring-history-grid"></div>
       </details>
       <div class="footer-note" data-i18n="recurringNote">入力済み判定は「品目」で行います。支払先は直近の同じ品目を優先し、まだ履歴がなければ初期値を使います。</div>
+    </div>
+    <div class="card utility-launch-card"><div><div class="section-title" style="margin-bottom:4px">📈 光熱費の推移</div><div class="small">電気・ガス・水道の月ごとの変化を年単位で確認します。</div></div><button class="btn secondary" onclick="showUtilityChart()">グラフを見る</button></div>
+  </div>
+
+  <div id="utility" class="panel">
+    <div class="card utility-card">
+      <div class="utility-head"><div><div class="section-title" style="margin-bottom:4px">📈 光熱費の推移</div><div class="small">電気・ガス・水道の支出履歴を、1月〜12月で比較します。</div></div><button class="btn secondary" onclick="showTab('home')">← ホームへ戻る</button></div>
+      <div class="utility-year-nav"><button type="button" class="icon-btn" onclick="changeUtilityYear(-1)">‹</button><strong id="utilityYearLabel">2026年</strong><button type="button" class="icon-btn" onclick="changeUtilityYear(1)">›</button></div>
+      <div id="utilityLegend" class="utility-legend"></div>
+      <div class="utility-chart-wrap"><svg id="utilityChart" class="utility-chart" viewBox="0 0 1000 460" role="img" aria-label="光熱費推移グラフ"></svg></div>
+      <div id="utilityPointDetail" class="utility-point-detail">グラフの点をタップすると金額を表示します。</div>
     </div>
   </div>
 
@@ -294,14 +308,17 @@ let recurringPeriodOffset=0;
 const RECURRING_START_MONTH='2026-08';
 const touchedFields=new Set();
 let categoryAutoManaged=true;
+const ALL_MONTHS=[1,2,3,4,5,6,7,8,9,10,11,12];
 const RECURRING_ITEMS=[
-  {category:'電気代',shop:'NextPower'},
-  {category:'ガス代',shop:'東京ガス'},
-  {category:'水道代',shop:'戸田市'},
-  {category:'車のローン',shop:'三井住友海上'},
-  {category:'車の保険',shop:'ソニー損保'},
-  {category:'駐車場代',shop:'三井'}
+  {category:'電気代',shop:'NextPower',activeMonths:ALL_MONTHS},
+  {category:'ガス代',shop:'東京ガス',activeMonths:ALL_MONTHS},
+  {category:'水道代',shop:'戸田市',activeMonths:[2,4,6,8,10,12]},
+  {category:'車のローン',shop:'三井住友海上',activeMonths:ALL_MONTHS},
+  {category:'車の保険',shop:'ソニー損保',activeMonths:ALL_MONTHS},
+  {category:'駐車場代',shop:'三井',activeMonths:ALL_MONTHS},
+  {category:'NHK',shop:'NHK',activeMonths:[2]}
 ];
+function recurringItemsForMonth(ym){const m=Number(String(ym).slice(5,7));return RECURRING_ITEMS.filter(item=>(item.activeMonths||ALL_MONTHS).includes(m))}
 
 const I18N={
   logout:{ja:'ログアウト',en:'Log out',ko:'로그아웃','zh-TW':'登出'},
@@ -325,7 +342,8 @@ const RECURRING_NAMES={
   '水道代':{ja:'水道代',en:'Water',ko:'수도요금','zh-TW':'水費'},
   '車のローン':{ja:'車のローン',en:'Car loan',ko:'자동차 대출','zh-TW':'汽車貸款'},
   '車の保険':{ja:'車の保険',en:'Car insurance',ko:'자동차 보험','zh-TW':'汽車保險'},
-  '駐車場代':{ja:'駐車場代',en:'Parking',ko:'주차비','zh-TW':'停車費'}
+  '駐車場代':{ja:'駐車場代',en:'Parking',ko:'주차비','zh-TW':'停車費'},
+  'NHK':{ja:'NHK',en:'NHK',ko:'NHK','zh-TW':'NHK'}
 };
 const MONTH_NAMES={en:['January','February','March','April','May','June','July','August','September','October','November','December']};
 let activeLangs=['ja'];
@@ -422,7 +440,7 @@ supabaseClient.auth.onAuthStateChange((event,session)=>{if(event==='PASSWORD_REC
 
 async function initializeCloud(user){
   if(loadingCloud||loadedUserId===user.id)return;
-  loadingCloud=true;currentUser=user;setDbStatus('v1.3.1 / DB接続中…');
+  loadingCloud=true;currentUser=user;setDbStatus('v1.4 / DB接続中…');
   try{
     const {data:member,error:memberError}=await supabaseClient.from('household_members').select('household_id, display_name').eq('user_id',user.id).limit(1).maybeSingle();
     if(memberError)throw memberError;
@@ -433,9 +451,9 @@ async function initializeCloud(user){
     await ensureRentYear(rentYear);
     await loadCloudData();
     loadedUserId=user.id;
-    setDbStatus(`v1.3.1 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
+    setDbStatus(`v1.4 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
   }catch(err){
-    console.error(err);setDbStatus('v1.3.1 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
+    console.error(err);setDbStatus('v1.4 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
   }finally{loadingCloud=false}
 }
 async function loadCloudData(){
@@ -484,7 +502,7 @@ async function changeRentYear(delta){
   const next=rentYear+delta;
   if(next<2026){toast('家賃管理は2026年以降です');return}
   rentYear=next;
-  try{setDbStatus(`v1.3.1 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
+  try{setDbStatus(`v1.4 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
 }
 function renderRent(){
   const grid=document.getElementById('rentGrid');if(!grid)return;
@@ -536,13 +554,13 @@ async function saveRentAmount(ym,fromHere){
   await refreshCloud();toast(`${m}月だけ ${yen(value)} に変更しました`);showTab('rent');
 }
 
-async function refreshCloud(){try{setDbStatus('v1.3.1 / 更新中…');await loadCloudData();setDbStatus(`v1.3.1 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v1.3.1 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
+async function refreshCloud(){try{setDbStatus('v1.4 / 更新中…');await loadCloudData();setDbStatus(`v1.4 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v1.4 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
 
 function showTab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
 function setPayer(p){payer=p;document.getElementById('payerD').classList.toggle('active',p==='だいじ');document.getElementById('payerK').classList.toggle('active',p==='かんそく');updateRatioPresetEmphasis();updatePreview()}
-function updateRatioPresetEmphasis(){const d=document.getElementById('ratioDaiji'),k=document.getElementById('ratioKansoku');d.classList.remove('recommended','unlikely');k.classList.remove('recommended','unlikely');if(payer==='かんそく'){d.classList.add('recommended');k.classList.add('unlikely')}else{k.classList.add('recommended');d.classList.add('unlikely')}}
-function presetRatio(d,k){ratioD.value=d;ratioK.value=k;markTouched('ratioD');markTouched('ratioK');syncInputState(ratioD);syncInputState(ratioK);updatePreview()}
+function updateRatioPresetEmphasis(){const b50=document.getElementById('ratio5050'),d=document.getElementById('ratioDaiji'),k=document.getElementById('ratioKansoku');[b50,d,k].forEach(b=>b.classList.remove('recommended','unlikely'));const rd=Number(ratioD.value),rk=Number(ratioK.value);if(rd===50&&rk===50)b50.classList.add('recommended');else if(rd===100&&rk===0)d.classList.add('recommended');else if(rd===0&&rk===100)k.classList.add('recommended')}
+function presetRatio(d,k){ratioD.value=d;ratioK.value=k;markTouched('ratioD');markTouched('ratioK');syncInputState(ratioD);syncInputState(ratioK);updateRatioPresetEmphasis();updatePreview()}
 function syncInputState(el){if(!el)return;const has=String(el.value||'').trim()!=='';el.classList.toggle('has-value',has);el.classList.toggle('user-touched',has&&touchedFields.has(el.id))}
 function syncAllInputStates(){['amount','date','shop','category','memo','ratioD','ratioK'].forEach(id=>syncInputState(document.getElementById(id)))}
 function markTouched(id){touchedFields.add(id);syncInputState(document.getElementById(id))}
@@ -562,7 +580,7 @@ function applyCategoryPrediction(){
   category.value=stats[0]?.value||'';categoryAutoManaged=true;markPreset('category');renderCategoryTop();
 }
 function renderCategoryTop(){categoryTop.innerHTML=categoryTopForCurrentShop().map(v=>`<button type="button" data-quick-field="category" data-quick-value="${escapeAttr(v)}">${escapeHtml(v)}</button>`).join('')}
-['amount','ratioD','ratioK'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{markTouched(id);updatePreview();updateDuplicateWarning()}));
+['amount','ratioD','ratioK'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{markTouched(id);if(id==='ratioD'||id==='ratioK')updateRatioPresetEmphasis();updatePreview();updateDuplicateWarning()}));
 date.addEventListener('input',()=>{markTouched('date');updateDuplicateWarning()});
 shop.addEventListener('input',()=>{markTouched('shop');applyCategoryPrediction();updateDuplicateWarning()});
 category.addEventListener('input',()=>{markTouched('category');categoryAutoManaged=false});
@@ -617,14 +635,14 @@ function preferredRecurringShop(item){
 }
 function addMonthsToYm(ym,delta){const [y,m]=ym.split('-').map(Number),d=new Date(y,m-1+delta,1);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`}
 function recurringItemHtml(item,ym){const e=recurringExpenseForMonth(item,ym);return `<div class="recurring-item ${e?'done':'missing'}" ${e?'':`role="button" tabindex="0" onclick="openRecurringInput('${escapeAttr(item.category)}','${ym}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openRecurringInput('${escapeAttr(item.category)}','${ym}')}`}"><div class="recurring-left"><div class="recurring-mark">${e?'✓':'○'}</div><div><div class="recurring-name">${recurringNameMarkup(item.category)}</div><div class="recurring-meta">${e?`${escapeHtml(e.shop||'支払先なし')} ・ ${fmtDate(e.date)}`:`${escapeHtml(preferredRecurringShop(item))} ・ 未入力`}</div></div></div><div class="recurring-amount">${e?yen(e.amount):'入力する'}</div></div>`}
-function recurringMonthDone(ym){return RECURRING_ITEMS.reduce((n,item)=>n+(recurringExpenseForMonth(item,ym)?1:0),0)}
+function recurringMonthDone(ym){return recurringItemsForMonth(ym).reduce((n,item)=>n+(recurringExpenseForMonth(item,ym)?1:0),0)}
 function recurringPastMonths(){const current=today().slice(0,7),end=addMonthsToYm(current,-1+recurringPeriodOffset);return Array.from({length:12},(_,i)=>addMonthsToYm(end,-i)).reverse().filter(m=>m>=RECURRING_START_MONTH&&m<current)}
 function renderRecurring(){
   const grid=document.getElementById('recurringGrid'),progress=document.getElementById('recurringProgress');if(!grid||!progress)return;
-  const ym=today().slice(0,7),done=recurringMonthDone(ym);
+  const ym=today().slice(0,7),activeItems=recurringItemsForMonth(ym),done=recurringMonthDone(ym);
   const title=document.getElementById('recurringCurrentTitle');if(title){const d=monthDict(ym,false);const x={ja:`${d.ja}の定期支出`,en:`${d.en} recurring expenses`,ko:`${d.ko} 정기 지출`,'zh-TW':`${d['zh-TW']}定期支出`};title.innerHTML=multiMarkup(x)}
-  grid.innerHTML=RECURRING_ITEMS.map(item=>recurringItemHtml(item,ym)).join('');
-  progress.textContent=`${done} / ${RECURRING_ITEMS.length} 入力済み`;
+  grid.innerHTML=activeItems.map(item=>recurringItemHtml(item,ym)).join('');
+  progress.textContent=`${done} / ${activeItems.length} 入力済み`;
   renderRecurringHistory();
 }
 function renderRecurringHistory(){
@@ -633,15 +651,29 @@ function renderRecurringHistory(){
   if(!months.length){label.textContent=`運用開始 ${RECURRING_START_MONTH.replace('-','年')}月`;summary.textContent='表示できる過去月なし';host.innerHTML='<div class="empty">運用開始前の月は表示しません</div>';return}
   const first=months[0],last=months[months.length-1];
   label.innerHTML=`${monthMarkup(first,true)} <span style="padding:0 6px">〜</span> ${monthMarkup(last,true)}`;
-  const incomplete=months.filter(m=>recurringMonthDone(m)<RECURRING_ITEMS.length).length;
+  const incomplete=months.filter(m=>recurringMonthDone(m)<recurringItemsForMonth(m).length).length;
   summary.textContent=incomplete?`未完了 ${incomplete}か月`:'すべて入力済み';
-  host.innerHTML=months.map(ym=>{const done=recurringMonthDone(ym),title=monthMarkup(ym,true),items=RECURRING_ITEMS.map(item=>recurringItemHtml(item,ym)).join('');return `<div class="recurring-month ${done===RECURRING_ITEMS.length?'complete':'incomplete'}"><div class="recurring-month-head"><strong>${title}</strong><span class="chip">${done} / ${RECURRING_ITEMS.length}</span></div><div class="recurring-month-wide recurring-grid">${items}</div><details class="recurring-month-mobile"><summary><span>${done===RECURRING_ITEMS.length?'✓ 入力済み':'未入力あり'}</span><span>開く</span></summary><div class="recurring-grid">${items}</div></details></div>`}).join('');
+  host.innerHTML=months.map(ym=>{const activeItems=recurringItemsForMonth(ym),done=recurringMonthDone(ym),total=activeItems.length,title=monthMarkup(ym,true),items=activeItems.map(item=>recurringItemHtml(item,ym)).join('');return `<div class="recurring-month ${done===total?'complete':'incomplete'}"><div class="recurring-month-head"><strong>${title}</strong><span class="chip">${done} / ${total}</span></div><div class="recurring-month-wide recurring-grid">${items}</div><details class="recurring-month-mobile"><summary><span>${done===total?'✓ 入力済み':'未入力あり'}</span><span>開く</span></summary><div class="recurring-grid">${items}</div></details></div>`}).join('');
 }
 function shiftRecurringPeriod(delta){const next=recurringPeriodOffset+delta,current=today().slice(0,7),end=addMonthsToYm(current,-1+next);if(next>0)return toast('ここが最新の12か月です');if(delta<0&&end<RECURRING_START_MONTH)return toast('2026年8月より前は定期支出の対象外です');recurringPeriodOffset=next;renderRecurringHistory()}
 function openRecurringInput(categoryName,ym=today().slice(0,7)){
   const item=RECURRING_ITEMS.find(x=>x.category===categoryName);if(!item)return;
   editingExpenseId=null;setPayer('かんそく');amount.value='';date.value=`${ym}-01`;category.value=item.category;shop.value=preferredRecurringShop(item);memo.value='';ratioD.value=50;ratioK.value=50;resetTouchState();categoryAutoManaged=false;syncAllInputStates();renderSuggestions();updatePreview();updateDuplicateWarning();showTab('input');setTimeout(()=>amount.focus(),120);toast(`${ym.replace('-','年')}月の${item.category}を入力します`);
 }
+let utilityYear=new Date().getFullYear();
+const utilityVisible={electric:true,gas:true,water:true};
+const UTILITY_SERIES=[
+  {key:'electric',category:'電気代',label:'⚡ 電気代',color:'#e69b18',marker:'square'},
+  {key:'gas',category:'ガス代',label:'🔥 ガス代',color:'#d95858',marker:'triangle'},
+  {key:'water',category:'水道代',label:'💧 水道代',color:'#2787c8',marker:'circle'}
+];
+function utilityYearBounds(){const years=state.expenses.filter(e=>UTILITY_SERIES.some(s=>normText(s.category)===normText(e.category))).map(e=>Number(String(e.date).slice(0,4))).filter(Number.isFinite);const now=new Date().getFullYear();return {min:years.length?Math.min(...years):now,max:now}}
+function showUtilityChart(){document.getElementById('manageView').style.display='none';showTab('utility');const b=utilityYearBounds();utilityYear=Math.min(Math.max(utilityYear,b.min),b.max);renderUtilityChart()}
+function changeUtilityYear(delta){const b=utilityYearBounds(),next=utilityYear+delta;if(next<b.min)return toast(`${b.min}年より前の光熱費データはありません`);if(next>b.max)return toast('未来の年は表示しません');utilityYear=next;renderUtilityChart()}
+function toggleUtilitySeries(key){utilityVisible[key]=!utilityVisible[key];renderUtilityChart()}
+function utilityMonthlyValues(category,year){const vals=Array(12).fill(null),found=Array(12).fill(false);state.expenses.forEach(e=>{if(normText(e.category)!==normText(category)||Number(String(e.date).slice(0,4))!==year)return;const m=Number(String(e.date).slice(5,7))-1;if(m<0||m>11)return;vals[m]=(vals[m]||0)+Number(e.amount||0);found[m]=true});return vals.map((v,i)=>found[i]?v:null)}
+function utilityMarkerSvg(marker,x,y,color,key,month,value){const common=`class="utility-point" tabindex="0" data-utility-key="${key}" data-month="${month}" data-value="${value}" fill="${color}"`;if(marker==='circle')return `<circle ${common} cx="${x}" cy="${y}" r="7"/>`;if(marker==='triangle')return `<polygon ${common} points="${x},${y-8} ${x-8},${y+7} ${x+8},${y+7}"/>`;return `<rect ${common} x="${x-7}" y="${y-7}" width="14" height="14" rx="2"/>`}
+function renderUtilityChart(){const svg=document.getElementById('utilityChart'),legend=document.getElementById('utilityLegend'),label=document.getElementById('utilityYearLabel');if(!svg||!legend||!label)return;label.textContent=`${utilityYear}年`;legend.innerHTML=UTILITY_SERIES.map(s=>`<button type="button" class="utility-toggle ${utilityVisible[s.key]?'':'off'}" style="color:${utilityVisible[s.key]?s.color:'#8b9490'}" onclick="toggleUtilitySeries('${s.key}')">${s.label}</button>`).join('');const series=UTILITY_SERIES.map(s=>({...s,values:utilityMonthlyValues(s.category,utilityYear)}));const values=series.filter(s=>utilityVisible[s.key]).flatMap(s=>s.values.filter(v=>v!==null));const maxValue=Math.max(1000,...values),niceMax=Math.ceil(maxValue/5000)*5000||5000;const W=1000,H=460,L=82,R=28,T=28,B=58,CW=W-L-R,CH=H-T-B,x=m=>L+(m-1)*(CW/11),y=v=>T+CH-(v/niceMax)*CH;let out='';for(let i=0;i<=4;i++){const val=niceMax*i/4,yy=y(val);out+=`<line x1="${L}" y1="${yy}" x2="${W-R}" y2="${yy}" stroke="#e2e8e4" stroke-width="1"/><text x="${L-10}" y="${yy+5}" text-anchor="end" font-size="20" fill="#687a70">${Math.round(val/1000)}k</text>`}for(let m=1;m<=12;m++)out+=`<text x="${x(m)}" y="${H-20}" text-anchor="middle" font-size="20" fill="#687a70">${m}</text>`;series.forEach(s=>{if(!utilityVisible[s.key])return;const pts=s.values.map((v,i)=>v===null?null:{m:i+1,v,x:x(i+1),y:y(v)}).filter(Boolean);if(pts.length>1)out+=`<polyline points="${pts.map(p=>`${p.x},${p.y}`).join(' ')}" fill="none" stroke="${s.color}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`;pts.forEach(p=>out+=utilityMarkerSvg(s.marker,p.x,p.y,s.color,s.key,p.m,p.v))});if(!values.length)out+=`<text x="500" y="220" text-anchor="middle" font-size="25" fill="#687a70">${utilityYear}年の光熱費データはありません</text>`;svg.innerHTML=out;svg.querySelectorAll('.utility-point').forEach(p=>{const show=()=>{const s=UTILITY_SERIES.find(x=>x.key===p.dataset.utilityKey);document.getElementById('utilityPointDetail').textContent=`${s.label}　${utilityYear}年${p.dataset.month}月　${yen(Number(p.dataset.value))}`};p.addEventListener('click',show);p.addEventListener('focus',show)})}
 function render(){renderSuggestions();renderRecurring();const bal=totalBalance();balance.textContent=yen(Math.abs(bal));direction.innerHTML=labelDelta(bal);const map=monthlyMap();const months=Object.keys(map).sort().reverse();monthList.innerHTML=months.length?months.map(m=>`<div class="row"><div><strong>${monthMarkup(m,true)}</strong><div class="meta">未精算</div></div><div class="amount">${labelDelta(map[m])}</div></div>`).join(''):'<div class="empty">未精算の支出はありません</div>';
   const fm=filterMonth?.value||'',ft=(filterText?.value||'').toLowerCase();const items=[...state.expenses].sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt).filter(e=>(!fm||monthOf(e.date)===fm)&&(!ft||[e.category,e.shop,e.memo,e.payer].join(' ').toLowerCase().includes(ft)));historyList.innerHTML=items.length?items.map(e=>`<div class="row"><div><strong>${escapeHtml(e.category||'（品目なし）')} ${e.shop?`@ ${escapeHtml(e.shop)}`:''}</strong><div class="meta">${fmtDate(e.date)} / ${personMarkup(e.payer)}が支払 / ${e.ratioD}:${e.ratioK}</div>${e.memo?`<div class="lang">${escapeHtml(e.memo)}</div>`:''}</div><div style="text-align:right"><div class="amount">${yen(e.amount)}</div><div class="meta">${labelDelta(debtDelta(e))}</div><div class="history-actions"><button class="icon-btn" onclick="editExpense('${e.id}')">編集</button><button class="icon-btn" onclick="deleteExpense('${e.id}')">削除</button></div></div></div>`).join(''):'<div class="empty">該当する履歴はありません</div>';
   const asc=Object.keys(map).sort();settlementOptions.innerHTML=asc.length?asc.map((m,i)=>{const included=asc.slice(0,i+1),sum=included.reduce((s,x)=>s+map[x],0);return `<label><input type="radio" name="settleMonth" value="${m}" ${i===asc.length-1?'checked':''}> ${monthMarkup(m,true)}まで <strong>${labelDelta(sum)}</strong></label>`}).join(''):'<div class="empty">精算できる未精算月はありません</div>';settlementHistory.innerHTML=state.settlements.length?[...state.settlements].sort((a,b)=>b.settledAt.localeCompare(a.settledAt)).map(s=>`<div class="row"><div><strong>${monthMarkup(s.through,true)}まで精算</strong><div class="meta">${fmtDate(s.settledAt)} / ${s.months.length}か月分</div></div><div style="text-align:right"><div class="amount">${labelDelta(s.amount)}</div><div class="history-actions"><button class="icon-btn" onclick="undoSettlement('${s.id}')">精算を取り消す</button></div></div></div>`).join(''):'<div class="empty">まだ精算履歴はありません</div>'}
@@ -656,11 +688,11 @@ async function fetchFullBackupData(){
     supabaseClient.from('rent_payments').select('*').eq('household_id',householdId).order('rent_month')
   ]);[e,sr,sm,rs,rp].forEach(x=>{if(x.error)throw x.error});const ids=new Set((sr.data||[]).map(x=>x.id));return {expenses:e.data||[],settlements:sr.data||[],settlement_months:(sm.data||[]).filter(x=>ids.has(x.settlement_id)),rent_settings:rs.data||null,rent_payments:rp.data||[]}
 }
-async function downloadFullBackup(){try{const data=await fetchFullBackupData(),backup={format:'futari-settle-backup',format_version:1,app_version:'1.3.1',created_at:new Date().toISOString(),household_id:householdId,display_name:currentDisplayName,data};downloadBlob(`futari-settle-backup-${today()}.json`,JSON.stringify(backup,null,2));toast('完全バックアップを保存しました')}catch(e){console.error(e);toast(`バックアップ失敗：${e.message||e}`)}}
+async function downloadFullBackup(){try{const data=await fetchFullBackupData(),backup={format:'futari-settle-backup',format_version:1,app_version:'1.4',created_at:new Date().toISOString(),household_id:householdId,display_name:currentDisplayName,data};downloadBlob(`futari-settle-backup-${today()}.json`,JSON.stringify(backup,null,2));toast('完全バックアップを保存しました')}catch(e){console.error(e);toast(`バックアップ失敗：${e.message||e}`)}}
 function validateBackup(b){return b&&b.format==='futari-settle-backup'&&b.format_version===1&&b.data&&Array.isArray(b.data.expenses)&&Array.isArray(b.data.settlements)&&Array.isArray(b.data.settlement_months)&&Array.isArray(b.data.rent_payments)}
 function backupPreviewText(b){const d=b.data;return `作成：${b.created_at?new Date(b.created_at).toLocaleString('ja-JP'):'不明'}\nアプリ：v${b.app_version||'不明'}\n支出：${d.expenses.length}件\n精算：${d.settlements.length}件\n精算月：${d.settlement_months.length}件\n家賃：${d.rent_payments.length}件`}
 async function restoreFromBackup(){const b=pendingRestoreBackup;if(!validateBackup(b))return toast('有効なバックアップを選択してください');if(b.household_id&&b.household_id!==householdId)return toast('別の世帯のバックアップなので復元できません');const p=backupPreviewText(b);if(!await askConfirm('バックアップを復元しますか？',`${p}\n\n現在の帳簿データをこの状態へ置き換えます。`,'次へ'))return;if(!await askConfirm('最終確認',`この操作は現在の支出・精算・家賃データを書き換えます。\n\n復元を実行しますか？`,'復元を実行'))return;
-  try{setDbStatus('v1.3.1 / 復元中…');const d=b.data;
+  try{setDbStatus('v1.4 / 復元中…');const d=b.data;
     let q=await supabaseClient.from('expenses').delete().eq('household_id',householdId);if(q.error)throw q.error;
     q=await supabaseClient.from('settlements').delete().eq('household_id',householdId);if(q.error)throw q.error;
     q=await supabaseClient.from('rent_payments').delete().eq('household_id',householdId);if(q.error)throw q.error;
@@ -670,7 +702,7 @@ async function restoreFromBackup(){const b=pendingRestoreBackup;if(!validateBack
     if(d.rent_settings){const rs={...d.rent_settings,household_id:householdId};q=await supabaseClient.from('rent_settings').upsert(rs,{onConflict:'household_id'});if(q.error)throw q.error}
     if(d.rent_payments.length){q=await supabaseClient.from('rent_payments').insert(d.rent_payments.map(x=>({...x,household_id:householdId})));if(q.error)throw q.error}
     await refreshCloud();toast('バックアップを復元しました');showManagement(false)
-  }catch(e){console.error(e);setDbStatus('v1.3.1 / 復元エラー',true);toast(`復元中にエラー：${e.message||e}`)}
+  }catch(e){console.error(e);setDbStatus('v1.4 / 復元エラー',true);toast(`復元中にエラー：${e.message||e}`)}
 }
 function csvCell(v){const x=String(v??'');return /[",\n]/.test(x)?`"${x.replace(/"/g,'""')}"`:x}
 function csvText(rows){return '\ufeff'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n')}
