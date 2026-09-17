@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>ふたり精算（にゃんにゃん費） v1.4.2</title>
+<title>ふたり精算（にゃんにゃん費） v1.4.3</title>
 <style>
 :root{--bg:#f3f7f4;--card:#fff;--text:#183126;--muted:#687a70;--line:#dce7df;--accent:#2f6b4f;--good:#26734f;--warn:#9a6a16;--danger:#b42318;--shadow:0 8px 24px rgba(25,65,45,.08)}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:0 auto;padding:16px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{font-weight:800;font-size:1.2rem}.chip{font-size:.8rem;background:#eef2f7;border-radius:999px;padding:6px 10px;color:#46505a}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow)}.hero{padding:20px}.hero .label{color:var(--muted);font-size:.9rem}.balance{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.03em;margin:8px 0}.direction{font-size:1rem;color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700}.btn.primary{background:var(--accent);color:#fff}.btn.secondary{background:#eef2f7;color:#28323c}.btn.danger{background:#fff0ee;color:var(--danger)}.section-title{font-size:1rem;font-weight:800;margin-bottom:12px}.month-list,.history-list{display:flex;flex-direction:column;gap:8px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border:1px solid var(--line);border-radius:12px}.row .meta{color:var(--muted);font-size:.85rem}.row .amount{font-weight:800}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.82rem;color:var(--muted);font-weight:700}input,select{width:100%;border:1px solid #d5d9df;border-radius:10px;padding:11px 12px;background:#fff;color:var(--text)}.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.seg button{border:1px solid #d5d9df;background:#fff;padding:12px;border-radius:10px;font-weight:800}.seg button.active{border-color:var(--accent);background:#e6f1ea;color:#245b43}.details{margin-top:10px}.details summary{cursor:pointer;color:var(--muted);font-weight:700}.ratio-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.ratio-preset{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.ratio-preset button{border:1px solid #d5d9df;background:#fff;border-radius:9px;padding:9px 11px;transition:.15s}.ratio-preset button.recommended{border-color:var(--accent);background:#e6f1ea;color:#245b43;font-weight:850;box-shadow:0 0 0 2px rgba(45,108,223,.08)}.ratio-preset button.unlikely{opacity:.42;font-size:.78rem}.ratio-main{font-weight:800}.advanced-ratio{margin-top:10px}.quick-picks{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.quick-picks button{border:1px solid #d5d9df;background:#f8fafc;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:750;color:#3d4852}.quick-picks:before{content:"よく使う";font-size:.72rem;color:var(--muted);align-self:center;margin-right:2px}.tabs{display:flex;gap:8px;margin:18px 0 12px;overflow:auto;padding-bottom:2px}.tab{white-space:nowrap;border:0;background:transparent;padding:10px 12px;border-radius:10px;font-weight:800;color:var(--muted)}.tab.active{background:#e3eee7;color:#245b43}.panel{display:none}.panel.active{display:block}.small{font-size:.85rem;color:var(--muted)}.settlement-box{border:1px dashed #c9ced6;border-radius:12px;padding:12px;background:#fafbfc}.settlement-options{display:flex;flex-direction:column;gap:8px;margin-top:10px}.settlement-options label{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:600}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#20262d;color:#fff;padding:10px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:.2s;z-index:99}.toast.show{opacity:1}.empty{padding:18px;text-align:center;color:var(--muted)}.badge{font-size:.72rem;padding:4px 7px;border-radius:999px;background:#f0f2f4;color:#59616a}.history-actions{display:flex;gap:6px}.icon-btn{border:1px solid #d5d9df;background:#fff;border-radius:8px;padding:6px 8px}.footer-note{font-size:.75rem;color:#8a929a;margin-top:12px}.lang{font-size:.75rem;color:#77818b;margin-top:3px}@media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.card{border-radius:16px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{align-items:flex-start}.balance{font-size:2.3rem}.btn{flex:1}.actions{display:grid;grid-template-columns:1fr 1fr}.ratio-wrap{grid-template-columns:1fr 1fr}.row{align-items:flex-start}}@media(min-width:900px){#inputPanel .card{position:sticky;top:16px}#inputPanel .card{padding:14px}.form-grid{gap:10px}.field{gap:4px}.details{margin-top:8px}.ratio-wrap{margin-top:8px;gap:10px}.quick-picks{margin-top:5px}.section-title{margin-bottom:10px}input,select{padding:9px 11px}.seg button{padding:10px}.btn{padding:10px 14px}}
 .modal-backdrop{position:fixed;inset:0;background:rgba(10,30,20,.42);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}.modal-backdrop.show{display:flex}.modal-card{width:min(440px,100%);background:#fff;border-radius:18px;padding:18px;box-shadow:0 18px 60px rgba(0,0,0,.22)}.modal-card h3{margin:0 0 10px}.modal-card .modal-message{white-space:pre-line;line-height:1.6;color:var(--text)}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.modal-actions button{min-width:110px}
@@ -135,27 +135,32 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
   .mobile-maintenance-footer .manage-launch,.mobile-maintenance-footer .logout-compact{font-size:.76rem;padding:7px 9px;flex:none;width:auto}
 }
 
-/* v1.4.2: utility trend chart */
+/* v1.4.3: utility trend chart */
 .utility-launch-card{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.utility-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}.utility-year-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px 0 12px}.utility-year-nav strong{min-width:110px;text-align:center;font-size:1.05rem}.utility-legend{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}.utility-toggle{border:1px solid currentColor;background:#fff;border-radius:999px;padding:8px 12px;font-weight:850}.utility-toggle.off{color:#8b9490!important;border-color:#cfd6d2;background:#f2f4f3;opacity:.7}.utility-chart-wrap{width:100%;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff}.utility-chart{display:block;width:100%;height:auto;min-height:280px}.utility-point{cursor:pointer;stroke:#fff;stroke-width:3}.utility-point-detail{text-align:center;min-height:2.5em;margin-top:10px;font-weight:750;color:var(--muted)}@media(max-width:479px){.utility-launch-card{align-items:stretch}.utility-launch-card .btn{width:100%}.utility-card{padding:12px}.utility-chart{min-height:245px}.utility-toggle{padding:7px 9px;font-size:.88rem}.utility-point-detail{font-size:.88rem}}
 
-/* v1.4.2: inline amount calculator */
+/* v1.4.3: inline amount calculator */
 .amount-input-row{display:flex;gap:8px;align-items:stretch}
 .amount-input-row #amount{flex:1;min-width:0}
 .calc-launch{flex:0 0 46px;padding:0;font-size:1.15rem;display:grid;place-items:center}
 .amount-calculator{display:none;margin-top:9px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#f8fbf9}
 .amount-calculator.open{display:block}
+.calc-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
+.calc-title{font-size:.82rem;font-weight:800;color:var(--muted)}
+.calc-close-x{width:30px;height:30px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:1.2rem;line-height:1;display:grid;place-items:center;padding:0}
+.calc-close-x:hover{background:#eef2f0;color:var(--text)}
 .calc-screen{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-bottom:9px;text-align:right}
 .calc-expression{min-height:1.25em;font-size:.82rem;color:var(--muted);overflow-wrap:anywhere}
 .calc-result{font-size:1.25rem;font-weight:800;margin-top:2px;overflow-wrap:anywhere}
-.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(5,minmax(42px,auto));gap:6px}
 .calc-key{min-height:42px;border:1px solid var(--line);border-radius:9px;background:#fff;font:inherit;font-weight:700;cursor:pointer}
 .calc-key:active{transform:translateY(1px)}
 .calc-key.op{background:#eef7f1;color:var(--accent)}
+.calc-key.equals{grid-column:4;grid-row:4 / span 2;font-size:1.1rem}
 .calc-actions{display:flex;gap:7px;margin-top:9px}
 .calc-actions .btn{flex:1}
 @media(max-width:479px){.calc-key{min-height:44px}.amount-calculator{padding:9px}.calc-launch{flex-basis:44px}}
 </style>
-  <!-- v1.4.2 favicon / home-screen icon -->
+  <!-- v1.4.3 favicon / home-screen icon -->
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
@@ -168,7 +173,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
     <div class="small" style="margin-top:4px">だいじ × かんそく</div>
     <div id="loginPanel">
       <h2>ログイン</h2>
-      <div class="small auth-note">Supabase Auth + DB v1.4.2</div>
+      <div class="small auth-note">Supabase Auth + DB v1.4.3</div>
       <div class="field"><label>メールアドレス</label><input id="loginEmail" type="email" autocomplete="username" placeholder="email@example.com"></div>
       <div class="field" style="margin-top:10px"><label>パスワード</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="パスワード"></div>
       <button id="loginButton" class="btn primary" style="width:100%;margin-top:14px">ログインする</button>
@@ -185,7 +190,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
   </div>
 </div>
 <div id="mainApp" class="app" style="display:none">
-  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div id="pairNames" class="small"></div></div><div class="top-actions"><div id="authUserChip" class="chip auth-user-chip" hidden>Supabase接続中</div><div id="dbStatusChip" class="chip">v1.4.2 / DB読込中…</div><button id="manageButton" class="manage-launch" data-i18n="dataManagement">データ管理</button><button id="logoutButton" class="btn secondary logout-compact" data-i18n="logout">ログアウト</button></div></div>
+  <div class="topbar"><div><div class="brand">ふたり精算（にゃんにゃん費）</div><div id="pairNames" class="small"></div></div><div class="top-actions"><div id="authUserChip" class="chip auth-user-chip" hidden>Supabase接続中</div><div id="dbStatusChip" class="chip">v1.4.3 / DB読込中…</div><button id="manageButton" class="manage-launch" data-i18n="dataManagement">データ管理</button><button id="logoutButton" class="btn secondary logout-compact" data-i18n="logout">ログアウト</button></div></div>
   <div id="languageSelector" class="language-selector" aria-label="表示言語">
     <label><input type="checkbox" value="ja" checked>日本語</label>
     <label><input type="checkbox" value="en">English</label>
@@ -242,7 +247,7 @@ body.device-ios.narrow-device #inputPanel input[type="date"]{
           <div class="field compact-pair"><label data-i18n="date">日付</label><input id="date" type="date" /></div>
           <div class="field content-pair"><label data-i18n="shop">お店・支払先</label><input id="shop" list="shops" placeholder="例：サミット" /><datalist id="shops"></datalist><div id="shopTop" class="quick-picks"></div></div>
           <div class="field content-pair"><label data-i18n="category">品目</label><input id="category" list="categories" placeholder="例：食材" /><datalist id="categories"></datalist><div id="categoryTop" class="quick-picks"></div></div>
-          <div class="field compact-pair"><label data-i18n="amount">金額</label><div class="amount-input-row"><input id="amount" inputmode="numeric" placeholder="例：3800" /><button id="calcLaunch" type="button" class="btn secondary calc-launch" aria-label="計算機を開く" title="計算機">🧮</button></div><div id="amountCalculator" class="amount-calculator" aria-hidden="true"><div class="calc-screen"><div id="calcExpression" class="calc-expression">0</div><div id="calcResult" class="calc-result">0</div></div><div id="calcGrid" class="calc-grid"><button type="button" class="calc-key" data-calc="7">7</button><button type="button" class="calc-key" data-calc="8">8</button><button type="button" class="calc-key" data-calc="9">9</button><button type="button" class="calc-key op" data-calc="/">÷</button><button type="button" class="calc-key" data-calc="4">4</button><button type="button" class="calc-key" data-calc="5">5</button><button type="button" class="calc-key" data-calc="6">6</button><button type="button" class="calc-key op" data-calc="*">×</button><button type="button" class="calc-key" data-calc="1">1</button><button type="button" class="calc-key" data-calc="2">2</button><button type="button" class="calc-key" data-calc="3">3</button><button type="button" class="calc-key op" data-calc="-">−</button><button type="button" class="calc-key" data-calc="0">0</button><button type="button" class="calc-key" data-calc=".">.</button><button type="button" class="calc-key" data-calc="back">⌫</button><button type="button" class="calc-key op" data-calc="+">＋</button><button type="button" class="calc-key" data-calc="clear">C</button><button type="button" class="calc-key op" data-calc="=">＝</button></div><div class="calc-actions"><button id="calcClose" type="button" class="btn secondary">閉じる</button><button id="calcApply" type="button" class="btn primary">¥0 を金額に入力</button></div></div></div>
+          <div class="field compact-pair"><label data-i18n="amount">金額</label><div class="amount-input-row"><input id="amount" inputmode="numeric" placeholder="例：3800" /><button id="calcLaunch" type="button" class="btn secondary calc-launch" aria-label="計算機を開く" title="計算機">🧮</button></div><div id="amountCalculator" class="amount-calculator" aria-hidden="true"><div class="calc-head"><span class="calc-title">ミニ計算機</span><button id="calcClose" type="button" class="calc-close-x" aria-label="計算機を閉じる" title="閉じる">×</button></div><div class="calc-screen"><div id="calcExpression" class="calc-expression">0</div><div id="calcResult" class="calc-result">0</div></div><div id="calcGrid" class="calc-grid"><button type="button" class="calc-key" data-calc="clear">C</button><button type="button" class="calc-key" data-calc="back">⌫</button><button type="button" class="calc-key op" data-calc="/">÷</button><button type="button" class="calc-key op" data-calc="*">×</button><button type="button" class="calc-key" data-calc="7">7</button><button type="button" class="calc-key" data-calc="8">8</button><button type="button" class="calc-key" data-calc="9">9</button><button type="button" class="calc-key op" data-calc="-">−</button><button type="button" class="calc-key" data-calc="4">4</button><button type="button" class="calc-key" data-calc="5">5</button><button type="button" class="calc-key" data-calc="6">6</button><button type="button" class="calc-key op" data-calc="+">＋</button><button type="button" class="calc-key" data-calc="1">1</button><button type="button" class="calc-key" data-calc="2">2</button><button type="button" class="calc-key" data-calc="3">3</button><button type="button" class="calc-key op equals" data-calc="=">＝</button><button type="button" class="calc-key" data-calc="0">0</button><button type="button" class="calc-key" data-calc="00">00</button><button type="button" class="calc-key" data-calc=".">.</button></div><div class="calc-actions"><button id="calcApply" type="button" class="btn primary">¥0 を金額に入力</button></div></div></div></div>
           <div class="field full"><label data-i18n="memo">メモ（任意）</label><input id="memo" placeholder="例：楽天カードで立替 など" /></div>
         </div>
         <details class="details"><summary data-i18n="ratioChange">負担割合を変更（通常は50:50）</summary><div class="ratio-preset"><button id="ratio5050" class="ratio-main" onclick="presetRatio(50,50)" data-i18n="split5050">50 : 50（割り勘）</button><button id="ratioDaiji" onclick="presetRatio(100,0)" data-i18n="daijiPurchase">だいじの買物を立替</button><button id="ratioKansoku" onclick="presetRatio(0,100)" data-i18n="kansokuPurchase">かんそくの買物を立替</button></div><div class="ratio-wrap advanced-ratio"><div class="field"><label data-i18n="daijiShare">だいじ負担 %</label><input id="ratioD" type="number" min="0" max="100" value="50" /></div><div class="field"><label data-i18n="kansokuShare">かんそく負担 %</label><input id="ratioK" type="number" min="0" max="100" value="50" /></div></div></details>
@@ -462,7 +467,7 @@ supabaseClient.auth.onAuthStateChange((event,session)=>{if(event==='PASSWORD_REC
 
 async function initializeCloud(user){
   if(loadingCloud||loadedUserId===user.id)return;
-  loadingCloud=true;currentUser=user;setDbStatus('v1.4.2 / DB接続中…');
+  loadingCloud=true;currentUser=user;setDbStatus('v1.4.3 / DB接続中…');
   try{
     const {data:member,error:memberError}=await supabaseClient.from('household_members').select('household_id, display_name').eq('user_id',user.id).limit(1).maybeSingle();
     if(memberError)throw memberError;
@@ -473,9 +478,9 @@ async function initializeCloud(user){
     await ensureRentYear(rentYear);
     await loadCloudData();
     loadedUserId=user.id;
-    setDbStatus(`v1.4.2 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
+    setDbStatus(`v1.4.3 / DB ✓ ${PERSON_NAMES[currentDisplayName]?.[activeLangs[0]]||currentDisplayName||'接続済み'}`);
   }catch(err){
-    console.error(err);setDbStatus('v1.4.2 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
+    console.error(err);setDbStatus('v1.4.3 / DB接続エラー',true);toast(`DB接続エラー：${err.message||err}`);
   }finally{loadingCloud=false}
 }
 async function loadCloudData(){
@@ -524,7 +529,7 @@ async function changeRentYear(delta){
   const next=rentYear+delta;
   if(next<2026){toast('家賃管理は2026年以降です');return}
   rentYear=next;
-  try{setDbStatus(`v1.4.2 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
+  try{setDbStatus(`v1.4.3 / ${rentYear}年を準備中…`);await ensureRentYear(rentYear);await refreshCloud()}catch(err){console.error(err);toast(`家賃データを準備できませんでした：${err.message||err}`)}
 }
 function renderRent(){
   const grid=document.getElementById('rentGrid');if(!grid)return;
@@ -576,7 +581,7 @@ async function saveRentAmount(ym,fromHere){
   await refreshCloud();toast(`${m}月だけ ${yen(value)} に変更しました`);showTab('rent');
 }
 
-async function refreshCloud(){try{setDbStatus('v1.4.2 / 更新中…');await loadCloudData();setDbStatus(`v1.4.2 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v1.4.2 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
+async function refreshCloud(){try{setDbStatus('v1.4.3 / 更新中…');await loadCloudData();setDbStatus(`v1.4.3 / DB ✓ ${currentDisplayName||'接続済み'}`)}catch(err){console.error(err);setDbStatus('v1.4.3 / DBエラー',true);toast(`DB読込エラー：${err.message||err}`)}}
 
 function showTab(id){document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
@@ -607,7 +612,7 @@ date.addEventListener('input',()=>{markTouched('date');updateDuplicateWarning()}
 shop.addEventListener('input',()=>{markTouched('shop');applyCategoryPrediction();updateDuplicateWarning()});
 category.addEventListener('input',()=>{markTouched('category');categoryAutoManaged=false});
 memo.addEventListener('input',()=>markTouched('memo'));
-// v1.4.2 inline amount calculator
+// v1.4.3 inline amount calculator
 let calcExpr='';
 function calcFormatNumber(n){if(!Number.isFinite(n))return 'エラー';return String(Math.round((n+Number.EPSILON)*1e10)/1e10)}
 function calcPretty(expr){return (expr||'0').replaceAll('*',' × ').replaceAll('/',' ÷ ').replaceAll('+',' ＋ ').replaceAll('-',' − ').replace(/\s+/g,' ').trim()||'0'}
@@ -632,7 +637,7 @@ function openCalculator(){
 }
 function closeCalculator(){amountCalculator.classList.remove('open');amountCalculator.setAttribute('aria-hidden','true');calcLaunch.setAttribute('aria-expanded','false')}
 function calcPress(key){
-  if(/^\d$/.test(key)){calcExpr+=key;renderCalculator();return}
+  if(/^\d{1,2}$/.test(key)){calcExpr+=key;renderCalculator();return}
   if(key==='.'){const part=calcExpr.split(/[+\-*/]/).at(-1);if(!part.includes('.'))calcExpr+=(part?'':'0')+'.';renderCalculator();return}
   if(key==='clear'){calcExpr='';renderCalculator();return}
   if(key==='back'){calcExpr=calcExpr.slice(0,-1);renderCalculator();return}
@@ -746,11 +751,11 @@ async function fetchFullBackupData(){
     supabaseClient.from('rent_payments').select('*').eq('household_id',householdId).order('rent_month')
   ]);[e,sr,sm,rs,rp].forEach(x=>{if(x.error)throw x.error});const ids=new Set((sr.data||[]).map(x=>x.id));return {expenses:e.data||[],settlements:sr.data||[],settlement_months:(sm.data||[]).filter(x=>ids.has(x.settlement_id)),rent_settings:rs.data||null,rent_payments:rp.data||[]}
 }
-async function downloadFullBackup(){try{const data=await fetchFullBackupData(),backup={format:'futari-settle-backup',format_version:1,app_version:'1.4.2',created_at:new Date().toISOString(),household_id:householdId,display_name:currentDisplayName,data};downloadBlob(`futari-settle-backup-${today()}.json`,JSON.stringify(backup,null,2));toast('完全バックアップを保存しました')}catch(e){console.error(e);toast(`バックアップ失敗：${e.message||e}`)}}
+async function downloadFullBackup(){try{const data=await fetchFullBackupData(),backup={format:'futari-settle-backup',format_version:1,app_version:'1.4.3',created_at:new Date().toISOString(),household_id:householdId,display_name:currentDisplayName,data};downloadBlob(`futari-settle-backup-${today()}.json`,JSON.stringify(backup,null,2));toast('完全バックアップを保存しました')}catch(e){console.error(e);toast(`バックアップ失敗：${e.message||e}`)}}
 function validateBackup(b){return b&&b.format==='futari-settle-backup'&&b.format_version===1&&b.data&&Array.isArray(b.data.expenses)&&Array.isArray(b.data.settlements)&&Array.isArray(b.data.settlement_months)&&Array.isArray(b.data.rent_payments)}
 function backupPreviewText(b){const d=b.data;return `作成：${b.created_at?new Date(b.created_at).toLocaleString('ja-JP'):'不明'}\nアプリ：v${b.app_version||'不明'}\n支出：${d.expenses.length}件\n精算：${d.settlements.length}件\n精算月：${d.settlement_months.length}件\n家賃：${d.rent_payments.length}件`}
 async function restoreFromBackup(){const b=pendingRestoreBackup;if(!validateBackup(b))return toast('有効なバックアップを選択してください');if(b.household_id&&b.household_id!==householdId)return toast('別の世帯のバックアップなので復元できません');const p=backupPreviewText(b);if(!await askConfirm('バックアップを復元しますか？',`${p}\n\n現在の帳簿データをこの状態へ置き換えます。`,'次へ'))return;if(!await askConfirm('最終確認',`この操作は現在の支出・精算・家賃データを書き換えます。\n\n復元を実行しますか？`,'復元を実行'))return;
-  try{setDbStatus('v1.4.2 / 復元中…');const d=b.data;
+  try{setDbStatus('v1.4.3 / 復元中…');const d=b.data;
     let q=await supabaseClient.from('expenses').delete().eq('household_id',householdId);if(q.error)throw q.error;
     q=await supabaseClient.from('settlements').delete().eq('household_id',householdId);if(q.error)throw q.error;
     q=await supabaseClient.from('rent_payments').delete().eq('household_id',householdId);if(q.error)throw q.error;
@@ -760,7 +765,7 @@ async function restoreFromBackup(){const b=pendingRestoreBackup;if(!validateBack
     if(d.rent_settings){const rs={...d.rent_settings,household_id:householdId};q=await supabaseClient.from('rent_settings').upsert(rs,{onConflict:'household_id'});if(q.error)throw q.error}
     if(d.rent_payments.length){q=await supabaseClient.from('rent_payments').insert(d.rent_payments.map(x=>({...x,household_id:householdId})));if(q.error)throw q.error}
     await refreshCloud();toast('バックアップを復元しました');showManagement(false)
-  }catch(e){console.error(e);setDbStatus('v1.4.2 / 復元エラー',true);toast(`復元中にエラー：${e.message||e}`)}
+  }catch(e){console.error(e);setDbStatus('v1.4.3 / 復元エラー',true);toast(`復元中にエラー：${e.message||e}`)}
 }
 function csvCell(v){const x=String(v??'');return /[",\n]/.test(x)?`"${x.replace(/"/g,'""')}"`:x}
 function csvText(rows){return '\ufeff'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n')}
